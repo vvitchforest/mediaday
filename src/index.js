@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from "react-router-dom";
+import { createBrowserHistory } from "history";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const history = createBrowserHistory();
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter history={history}>
+      <App />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
