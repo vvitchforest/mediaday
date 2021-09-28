@@ -1,0 +1,25 @@
+/* Change all text and icon colors in the player. */
+.vjs-metropolia-luokka-km559.video-js {
+    color: #00ff00;
+    font-size: 3rem;
+}
+
+/* Change the border of the big play button. */
+.vjs-metropolia-luokka-km559 .vjs-big-play-button {
+    border-color: #ffc400;
+}
+
+/* Change the color of various "bars". */
+.vjs-metropolia-luokka-km559 .vjs-volume-level,
+.vjs-metropolia-luokka-km559 .vjs-play-progress,
+.vjs-metropolia-luokka-km559 .vjs-slider-bar {
+    color: #da11d3;
+    font-size: 1rem;
+}
+
+
+.vjs-metropolia-luokka-km559 .vjs-play-control {
+    font-size: 4rem;
+    color: firebrick;
+    text-shadow: 10px 1px 3px forestgreen;
+}

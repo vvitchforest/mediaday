@@ -1,49 +1,61 @@
-import './App.css';
+import "./App.css";
 
 import { Switch, Route, Link } from "react-router-dom";
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-import AboutPage from './pages/AboutPage'
-import PromoVideo from './pages/PromoVideo';
-import EventPage from './pages/EventPage';
-import SchedulePage from './pages/SchedulePage';
-import logo from './logo.svg';
+import AboutPage from "./pages/AboutPage";
+import PromoVideo from "./pages/PromoVideo";
+import EventPage from "./pages/EventPage";
+import SchedulePage from "./pages/SchedulePage";
+import logo from "./logo.svg";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
 function App() {
   return (
     <div className="App">
-
-      <Navbar bg="dark" variant="dark">
-          <Navbar.Brand as={Link} to="/">
-            <img
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-          </Navbar.Brand>
-
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand as={Link} to="/">
+          <img
+            src={logo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="React Bootstrap logo"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <NavbarCollapse>
           <Nav defaultActiveKey="/home" className="me-auto">
             <Nav.Item>
-              <Nav.Link as={Link} to="/">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Home
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/schedule">Schedule</Nav.Link>
+              <Nav.Link as={Link} to="/schedule">
+                Schedule
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/promovideo">Tapahtuman promo</Nav.Link>
+              <Nav.Link as={Link} to="/promovideo">
+                Tapahtuman promo
+              </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} to="/event/mediaday-123">Mediaday event linkki</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} to="/event/mediaday-567">Mediaday event 567</Nav.Link>
-            </Nav.Item>
+            <NavDropdown title="Events">
+              <NavDropdown.Item as={Link} to="/event/mediaday-123">
+              Mediaday event linkki
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/event/mediaday-567">
+              Mediaday event 567
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
+        </NavbarCollapse>
       </Navbar>
 
       {/* A <Switch> looks through its children <Route>s and

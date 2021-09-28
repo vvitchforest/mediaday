@@ -1,15 +1,18 @@
-import './about.css';
+import "./about.css";
 
-import React from 'react';
-import Hello from '../Hello/Hello';
+import React from "react";
+import Hello from "../Hello/Hello";
 
-const About = ({ name }) => (
+const About = ({ name }) => {
+
+    document.title = "hello from about"
+
+  return (
     <div className="about">
-        <h2>About sivu, name propsina {name}</h2>
-        <Hello />
+      <h2>About sivu, name propsina {name}</h2>
+      <Hello />
     </div>
-);
-
+  );
+};
 
 export default About;
-

@@ -2,27 +2,32 @@
     "events": [
         {
             "videoUrl": "mediaday-123",
-            "name": "MediaDay Live Koodaus",
-            "startTime": "15:00",
-            "startDate": "21.9.2021",
-            "streamUrl": "http://195.148.104.124:1935/jakelu/1/playlist.m3u8",
+            "title": "MediaDay Live Koodaus",
+            "startTime": "12:00",
+            "endTime": "13:00",
+            "startDate": "29.9.2021",
+            "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
             "streamVideoType": "application/x-mpegurl"
         },
         {
             "videoUrl": "mediaday-567",
-            "name": "MediaDay Tulevaisuus Koodaus",
-            "startTime": "15:00",
+            "title": "MediaDay Tulevaisuus Koodaus",
+            "startTime": "13:00",
+            "endTime": "14:00",
             "startDate": "21.9.2021",
             "streamUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm",
             "streamVideoType": "video/webm"
         },
         {
             "videoUrl": "opiskelupaiva",
-            "name": "Opiskelupäivä",
-            "startTime": "15:00",
+            "title": "Opiskelupäivä",
+            "startTime": "14:30",
+            "endTime": "17:00",
             "startDate": "21.9.2021",
             "streamUrl": "//vjs.zencdn.net/v/oceans.mp4",
-            "streamVideoType": "video/mp4"
+            "streamVideoType": "video/mp4",
+            "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+            "archiveVideoType": "video/mp4"
         }
     ]
 }
