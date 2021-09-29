@@ -9,6 +9,7 @@ import EventPage from "./pages/EventPage";
 import SchedulePage from "./pages/SchedulePage";
 import logo from "./logo.svg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import eventData from "./data/events.json"
 
 function App() {
   return (
@@ -47,11 +48,20 @@ function App() {
               </Nav.Link>
             </Nav.Item>
             <NavDropdown title="Events">
-              <NavDropdown.Item as={Link} to="/event/mediaday-123">
-              Mediaday event linkki
+              <NavDropdown.Item as={Link} to="/event/mediaday-01">
+                Tulevaisuuden ratkaisut elokuvatuotannossa
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/event/mediaday-567">
-              Mediaday event 567
+              <NavDropdown.Item as={Link} to="/event/mediaday-02">
+              Käyttäjäkokemuksen merkitys IT-järjestelmissä
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/event/mediaday-03">
+              Yrittäjyys korkean teknologian alalla
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/event/mediaday-04">
+              Kamerauutuudet indie-tuotannossa
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/event/mediaday-05">
+              Minne menet, suomalainen AV-ala?
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

@@ -1,31 +1,69 @@
 {
     "events": [
         {
-            "videoUrl": "mediaday-123",
-            "title": "MediaDay Live Koodaus",
+            "videoUrl": "mediaday-01",
+            "title": "Tulevaisuuden ratkaisut elokuvatuotannossa",
+            "speaker": "Mikko Kodisoja",
+            "company": "Fireframe",
+            "startTime": "10:00",
+            "endTime": "11:00",
+            "startDate": "30.9.2021",
+            "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+            "streamVideoType": "application/x-mpegurl",
+            "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+            "archiveVideoType": "video/mp4"
+        },
+        {
+            "videoUrl": "mediaday-02",
+            "title": "Käyttäjäkokemuksen merkitys IT-järjestelmissä",
+            "speaker": "Sami Marttinen",
+            "company": "Swappie",
+            "startTime": "11:00",
+            "endTime": "12:00",
+            "startDate": "21.9.2021",
+            "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+            "streamVideoType": "application/x-mpegurl",
+            "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+            "archiveVideoType": "video/mp4"
+        },
+        {
+            "videoUrl": "mediaday-03",
+            "title": "Yrittäjyys korkean teknologian alalla",
+            "speaker": "Frans Tihveräinen",
+            "company": "FlyAR",
             "startTime": "12:00",
             "endTime": "13:00",
-            "startDate": "29.9.2021",
+            "startDate": "21.9.2021",
             "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
-            "streamVideoType": "application/x-mpegurl"
+            "streamVideoType": "application/x-mpegurl",
+            "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+            "archiveVideoType": "video/mp4"
         },
+
         {
-            "videoUrl": "mediaday-567",
-            "title": "MediaDay Tulevaisuus Koodaus",
-            "startTime": "13:00",
-            "endTime": "14:00",
+            "videoUrl": "mediaday-04",
+            "title": "Kamerauutuudet indie-tuotannossa",
+            "speaker": "Ulrich Mors",
+            "company": "Sony",
+            "startTime": "14:00",
+            "endTime": "15:00",
             "startDate": "21.9.2021",
-            "streamUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm",
-            "streamVideoType": "video/webm"
+            "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+            "streamVideoType": "application/x-mpegurl",
+            "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+            "archiveVideoType": "video/mp4"
         },
+
         {
-            "videoUrl": "opiskelupaiva",
-            "title": "Opiskelupäivä",
-            "startTime": "14:30",
-            "endTime": "17:00",
+            "videoUrl": "mediaday-05",
+            "title": "Minne menet, suomalainen AV-ala?",
+            "speaker": "Mika Vakkilainen",
+            "company": "Avita ry",
+            "startTime": "15:00",
+            "endTime": "16:00",
             "startDate": "21.9.2021",
-            "streamUrl": "//vjs.zencdn.net/v/oceans.mp4",
-            "streamVideoType": "video/mp4",
+            "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+            "streamVideoType": "application/x-mpegurl",
             "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
             "archiveVideoType": "video/mp4"
         }

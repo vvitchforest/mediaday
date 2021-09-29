@@ -39,10 +39,17 @@ const EventPage = () => {
                     />
                   )}
                   {!streamHasStarted && (
-                    <h2>Striimi alkaa joskus myöhemmin (countdown?)</h2>
+                    <>
+                    <h2>Striimi alkaa joskus myöhemmin, tässä promo/arkisto video (placeholder atm)</h2>
+                    <Video
+                    url={eventResult.archiveVideoUrl}
+                    type={eventResult.archiveVideoType}
+                  />
+                  </>       
                   )}
                 </>
               )}
+            
             </WaitingForStream>
           </Col>
           <Col>
