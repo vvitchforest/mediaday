@@ -60,7 +60,7 @@ const EventPage = () => {
                 {streamHasEnded && (
                   <>
                     <h2>
-                      Striimi alkaa joskus myöhemmin, tässä promo video
+                      Striimi on päättynyt, tässä video
                       tallenne (placeholder atm)
                     </h2>
                     <Video
