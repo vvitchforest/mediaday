@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import { Switch, Route, Link } from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
