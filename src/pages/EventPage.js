@@ -35,10 +35,11 @@ const EventPage = () => {
           <WaitingForStream
             startDate={eventResult.startDate}
             startTime={eventResult.startTime}
+            endTime={eventResult.endTime}
           >
-            {(streamHasStarted) => (
+            {(streamHasStarted, streamHasEnded) => (
               <>
-                {streamHasStarted && (
+                {streamHasStarted && !streamHasEnded && (
                   <Video
                     url={eventResult.streamUrl}
                     type={eventResult.streamVideoType}
@@ -47,8 +48,20 @@ const EventPage = () => {
                 {!streamHasStarted && (
                   <>
                     <h2>
-                      Striimi alkaa joskus myöhemmin, tässä promo/arkisto video
+                      Striimi alkaa joskus myöhemmin, tässä promo video
                       (placeholder atm)
+                    </h2>
+                    <Video
+                      url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm"
+                      type="video/webm"
+                    />
+                  </>
+                )}
+                {streamHasEnded && (
+                  <>
+                    <h2>
+                      Striimi alkaa joskus myöhemmin, tässä promo video
+                      tallenne (placeholder atm)
                     </h2>
                     <Video
                       url={eventResult.archiveVideoUrl}
