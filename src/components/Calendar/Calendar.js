@@ -11,11 +11,20 @@ const Calendar = () => (
     <FullCalendar
       plugins={[timeGridPlugin, interactionPlugin]}
       initialView="timeGrid"
-      initialDate= "2021-09-21"
+      headerToolbar={false}
+      //initialDate= "2021-09-21"
       slotMinTime="10:00:00"
       slotMaxTime="20:00:00"
       height={700}
-     
+      views={{
+        timeGrid: {
+          visibleRange: {
+            start: "2021-09-29",
+            end: "2021-10-02",
+          },
+        },
+      }}
+
       events={eventData.events.map((data) => {
         const [day, month, year] = data.startDate.split(".").map(Number);
         const [startHour, startMinute] = data.startTime.split(":").map(Number);
