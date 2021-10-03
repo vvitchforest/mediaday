@@ -8,8 +8,10 @@ import PromoVideo from "./pages/PromoVideo";
 import EventPage from "./pages/EventPage";
 import SchedulePage from "./pages/SchedulePage";
 import logo from "./logo.svg";
+import bgPicture from "./images/bg1.jpg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import eventData from "./data/events.json"
+import { Col, Container, Row, Image, Button} from "react-bootstrap";
 
 function App() {
   return (
@@ -82,19 +84,27 @@ function App() {
         </Route>
         <Route path="/event/:id" children={<EventPage />} />
         <Route path="/">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+          <header>
+            <Image src={bgPicture} className="img"/>
+            <Container className="text-over-img">
+            <Row xs="auto">
+              <h1 className="display-2">MEDIADAY</h1>
+            </Row>
+            <Row xs="auto">
+              <p className="slogan-txt">LET'S GET INSPIRED!</p>
+            </Row>
+            <Row xs="auto">
+              <p className="header-txt">Metropolia ammattikorkeakoulu</p>
+            </Row>
+            <Row xs="auto">
+              <p className="header-txt">23.3.2022 Karaportti 2, Espoo</p>
+            </Row>
+            <Row className="justify-content-md-center extra-margin">
+              <Col md="auto">
+                <Button variant="purple">Striimi</Button>
+              </Col>
+            </Row>
+            </Container>
           </header>
         </Route>
       </Switch>
