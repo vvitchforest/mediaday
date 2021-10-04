@@ -40,6 +40,12 @@ h1{
   font-family: 'Libre Baskerville', serif;
 }
 
+.mediaday {
+  @include text-bg;
+  color: $myColor;
+  font-family: 'Libre Baskerville', serif;
+}
+
 .slogan-txt {
   @include text-bg;
   font-family: 'Lora', serif;

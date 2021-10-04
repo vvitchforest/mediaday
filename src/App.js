@@ -110,7 +110,7 @@ function App() {
             <Image src={bgPicture} className="img"/>
             <Container className="text-over-img">
             <Row xs="auto">
-              <h1 className="display-2">MEDIADAY</h1>
+              <h1 className="display-2 mediaday">MEDIADAY</h1>
             </Row>
             <Row xs="auto">
               <p className="slogan-txt">LET'S GET INSPIRED!</p>
