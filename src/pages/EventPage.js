@@ -1,7 +1,10 @@
 import React from "react";
-import "./event.css";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import "./event.scss";
+import "../styles.scss";
+import { Col, Container, Row, Image, Alert } from "react-bootstrap";
 import { useParams } from "react-router";
+import BackButton from "../components/BackButton";
+
 import Video from "../components/Video/Video";
 import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
 
@@ -17,20 +20,36 @@ const EventPage = () => {
   }
 
   return (
+    <>
+    <Container fluid>
+      <Row>
+        <Col className="d-flex justify-content-start mt-3 mx-5">
+          <BackButton ></BackButton>
+        </Col>
+      </Row>
+    </Container>
     <Container fluid="md">
       <Row>
-        <Col>
-          <h1 className="display-4">{eventResult.title}</h1>
+        <Col className="d-flex flex-column align-items-center">
+          <div className="gradient-border">
+            <Image
+              src={eventResult?.speaker.image}
+              alt="speaker"
+              roundedCircle
+              width="100%"
+              height="100%"
+              className="speaker-img p-3"
+            />
+          </div>
+          <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
+          <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
+        </Col>
+        <Col lg={9} className="event-info">
+          <h1 className="display-5 mb-3 text-wrap">{eventResult.title}</h1>
+          <p className="fs-4 fw-light">{eventResult?.description}</p>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <h2>
-            Striimi alkaa {eventResult.startDate} klo. {eventResult.startTime}{" "}
-          </h2>
-        </Col>
-      </Row>
-      <Row>
+      <Row className="mb-5">
         <Col>
           <WaitingForStream
             startDate={eventResult.startDate}
@@ -47,26 +66,36 @@ const EventPage = () => {
                 )}
                 {!streamHasStarted && (
                   <>
-                    <h2>
-                      Striimi alkaa joskus myöhemmin, tässä promo video
-                      (placeholder atm)
-                    </h2>
                     <Video
                       url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm"
                       type="video/webm"
                     />
+                    <Row className="justify-content-center">
+                      <Col>
+                        <Alert className="blue-overlay mt-3 shadow p-3 mb-5 rounded">
+                          Striimi alkaa {eventResult.startDate} klo.
+                          {eventResult.startTime} , tässä promo video
+                          (placeholder)
+                        </Alert>
+                      </Col>
+                    </Row>
                   </>
                 )}
                 {streamHasEnded && (
                   <>
-                    <h2>
-                      Striimi on päättynyt, tässä video
-                      tallenne (placeholder atm)
-                    </h2>
                     <Video
                       url={eventResult.archiveVideoUrl}
                       type={eventResult.archiveVideoType}
                     />
+                    <Row className="justify-content-center">
+                      <Col>
+                        <Alert className="blue-overlay mt-5 shadow p-3 mb-5 rounded fs-5 fw-normal">
+                          Striimi tapahtumasta {eventResult.title} on päättynyt{" "}
+                          {eventResult.startDate} klo {eventResult.endTime},
+                          tässä tallenne (placeholder)
+                        </Alert>
+                      </Col>
+                    </Row>
                   </>
                 )}
               </>
@@ -74,24 +103,8 @@ const EventPage = () => {
           </WaitingForStream>
         </Col>
       </Row>
-      <Row className="mt-5">
-        <Col>
-          <Image
-            src={eventResult.speaker.image}
-            alt="speaker"
-            roundedCircle
-            width="100"
-            height="100"
-            className="speaker-img"
-          />
-          <p>{eventResult.speaker.name}</p>
-          <p>{eventResult.speaker.company}</p>
-        </Col>
-        <Col lg={9} className="d-flex align-items-center">
-          <p>{eventResult.description}</p>
-        </Col>
-      </Row>
     </Container>
+    </>
   );
 };
 

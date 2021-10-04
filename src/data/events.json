@@ -9,7 +9,7 @@
           "image": "/images/mikko_kodisoja.jpg"
       }, 
       "startTime": "11:00",
-      "endTime": "12:00",
+      "endTime": "11:30",
       "startDate": "1.10.2021",
       "description": "Yrityksen perustaja Mikko Kodisoja kertoo, miksi vaihtoi peliteollisuuden elokuvamaailmaan. Kuumana puheenaiheena Suomen ensimmäinen Hollywood-tason ledseinä-studio. Puheenvuoro esitetään englanniksi.",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
@@ -75,13 +75,11 @@
       "title": "Minne menet, suomalainen AV-ala?",
       "speaker": {
           "name":  "Mika Vakkilainen",
-          "company": "Avita ry",
-          "image": " "
+          "company": "Avita ry"
       },
       "startTime": "15:00",
       "endTime": "16:00",
       "startDate": "29.9.2021",
-      "description": " ",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
       "streamVideoType": "application/x-mpegurl",
       "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
