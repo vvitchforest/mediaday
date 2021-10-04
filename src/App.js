@@ -12,6 +12,11 @@ import bgPicture from "./images/bg1.jpg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import eventData from "./data/events.json"
 import { Col, Container, Row, Image, Button} from "react-bootstrap";
+import InfoCard from './components/InfoCard/InfoCard';
+import { AiFillSmile } from 'react-icons/ai';
+import { BiMoviePlay } from 'react-icons/bi';
+import { ImBubbles3 } from 'react-icons/im';
+import { BiLink } from 'react-icons/bi';
 
 function App() {
   return (
@@ -106,6 +111,44 @@ function App() {
             </Row>
             </Container>
           </header>
+          <body>
+          <Container>
+            <Row xs={1} md={2} className="g-4">
+              <Col>
+                <InfoCard 
+                number="01"
+                title="MediaDay 2022"
+                text="Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän tauon jälkeen keväällä 2022."
+                icon={<BiMoviePlay />}
+                />
+              </Col>
+              <Col>
+                <InfoCard 
+                number="02"
+                title="Puhujia eri teollisuudenaloilta"
+                text="Huipputason ammattilaisten puheenvuoroja, mukana onta rautaista puhujaa monelta mediakentän osa-alueelta."
+                icon={<ImBubbles3 />}
+                />
+              </Col>
+              <Col>
+                <InfoCard 
+                number="03"
+                title="Mediaday yhdistää"
+                text="Mediaday tuo opiskelijat ja yritysmaailman yhteen. Näet uusimmat jutut ja tutustu ammattilaisten maailmaan."
+                icon={<BiLink />}
+                />
+              </Col>
+              <Col>
+                <InfoCard 
+                number="04"
+                title="Hyväntuulinen tekemisen meininki"
+                text=" Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat."
+                icon={<AiFillSmile/>}
+                />
+              </Col>
+            </Row>
+          </Container>
+          </body>
         </Route>
       </Switch>
     </div>
