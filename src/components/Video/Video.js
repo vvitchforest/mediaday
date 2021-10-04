@@ -1,9 +1,11 @@
-import "./video.css";
+
 
 import React, { useEffect, useRef } from "react";
 
 import videojs from "video.js";
+
 import "video.js/dist/video-js.css";
+import "./video.scss";
 
 const Video = ({ url, type }) => {
   const videoRef = useRef(null);
@@ -25,6 +27,7 @@ const Video = ({ url, type }) => {
 
   const onReady = (player) => {
     playerRef.current = player;
+    
 
     // you can handle player events here
     player.on("waiting", () => {
@@ -38,6 +41,7 @@ const Video = ({ url, type }) => {
 
   useEffect(() => {
     let player;
+    
 
     // make sure Video.js player is only initialized once
     if (!playerRef.current) {
@@ -47,15 +51,17 @@ const Video = ({ url, type }) => {
       player = (playerRef.current = videojs(videoElement, options, () => {
         console.log("player is ready");
         onReady && onReady(player);
+        
       }));
     } else {
       // you can update player here [update player through props]
       player = playerRef.current;
       player.autoplay(options.autoplay);
       player.src(options.sources);
+      
     }
 
-    player.addClass('vjs-metropolia-luokka-km559');
+    player.addClass('vjs-my-video-player');
 
   }, [options]);
 
@@ -71,7 +77,7 @@ const Video = ({ url, type }) => {
 
   return (
     <div data-vjs-player>
-      <video ref={videoRef} className="video-js vjs-big-play-centered" />
+      <video ref={videoRef} className="video-js vjs-big-play-centered vjs-show-big-play-button-on-pause" />
     </div>
   );
 };

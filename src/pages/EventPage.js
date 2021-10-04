@@ -30,7 +30,7 @@ const EventPage = () => {
     </Container>
     <Container fluid="md">
       <Row>
-        <Col className="d-flex flex-column align-items-center">
+        <Col className="d-flex flex-column align-items-center mb-3">
           <div className="gradient-border">
             <Image
               src={eventResult?.speaker.image}
@@ -38,7 +38,7 @@ const EventPage = () => {
               roundedCircle
               width="100%"
               height="100%"
-              className="speaker-img p-3"
+              className="speaker-img"
             />
           </div>
           <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>

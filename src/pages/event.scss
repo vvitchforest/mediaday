@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito+Sans:wght@300;400;700&display=swap');
+
 $bg-color: #f3f3fb;
 
 
 body {
     background-color: $bg-color;
+}
+
+h1 {
+    background-color: $bg-color;
+    font-family: 'Nunito Sans';
+    color: black;
 }
 
 
