@@ -1,0 +1,18 @@
+$bg-color: #f3f3fb;
+
+
+body {
+    background-color: $bg-color;
+}
+
+
+
+.speaker-img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.event-info {
+    text-align: left;
+
+}

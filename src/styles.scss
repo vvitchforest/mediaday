@@ -1,0 +1,61 @@
+.blue-overlay {
+    background-color: rgba(99, 180, 209, 0.5);
+    color: black;
+    border: none;
+    font-weight: 600;
+    font-size: 1.25em;
+  
+  }
+  
+  .gradient-border {
+   position: relative;
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   height: 220px;
+   width: 220px;
+  }
+    
+  .gradient-border::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius: 50%; 
+    padding: 17px; 
+    background:linear-gradient(45deg, #7699D4, #9448BC); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out; 
+    mask-composite: exclude; 
+  
+  }
+  
+  .back-button {
+    background-color: #CC3363;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: #94284a;
+        color: white;
+        border: none;
+        
+    }
+
+    &:active {
+        background-color: #CC3363;
+        border: none;
+        color: white;
+    }
+
+    &:focus {
+        background-color: #CC3363;
+        border: none;
+        color: white;
+
+    }
+  }
