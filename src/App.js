@@ -1,5 +1,7 @@
 import "./App.scss";
 
+import React from 'react';
+
 import { Switch, Route, Link } from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
@@ -7,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import PromoVideo from "./pages/PromoVideo";
 import EventPage from "./pages/EventPage";
 import SchedulePage from "./pages/SchedulePage";
+import CountDown from "./components/CountDown/CountDown";
 import logo from "./logo.svg";
 import bgPicture from "./images/bg1.jpg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
@@ -17,6 +20,20 @@ import { AiFillSmile } from 'react-icons/ai';
 import { BiMoviePlay } from 'react-icons/bi';
 import { ImBubbles3 } from 'react-icons/im';
 import { BiLink } from 'react-icons/bi';
+
+const Completionist = () => <span>You are good to go!</span>;
+
+// Renderer callback with condition
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return <Completionist />;
+  } else {
+    // Render a countdown
+    return <span>{hours}:{minutes}:{seconds}</span>;
+  }
+};
+
 
 function App() {
   return (
@@ -104,10 +121,15 @@ function App() {
             <Row xs="auto">
               <p className="header-txt">23.3.2022 Karaportti 2, Espoo</p>
             </Row>
-            <Row className="justify-content-md-center extra-margin">
+            <Row className="justify-content-md-center extra-margin-top">
               <Col md="auto">
                 <Button variant="purple">Striimi</Button>
               </Col>
+            </Row>
+            <Row className="justify-content-md-center extra-margin-bottom mt-4"> 
+              <Col md="auto">
+                <CountDown />    
+              </Col>    
             </Row>
             </Container>
           </header>
