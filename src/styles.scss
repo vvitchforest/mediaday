@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito+Sans:wght@300;400;700&display=swap');
 .blue-overlay {
     background-color: rgba(99, 180, 209, 0.5);
     color: black;
@@ -61,3 +61,56 @@
 
     }
   }
+
+  .offcanvas-backdrop.show {
+    opacity: 0;
+
+  }
+
+ .navbar {
+   background-color: white;
+ }
+
+ .me-auto.navbar-nav {
+   
+   font-family: "Nunito", sans-serif;
+   letter-spacing: 1px;
+   font-weight: bold;
+ }
+
+ .navbar-light .navbar-nav .nav-link {
+   color: black;
+
+   &:hover {
+     color: rgb(95, 93, 93);
+   }
+ }
+
+ .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+   color: #CC3363;
+ }
+
+ .event-drawer {
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 1px;
+  color: black;
+ 
+ 
+
+   &:hover {
+     color: black;
+    background-color: #f3f3fb;
+    
+
+   }
+ }
+
+ a.nav-link.event-drawer-active {
+  color: #CC3363;
+ 
+  
+  
+ }
+
+ 
+ 
