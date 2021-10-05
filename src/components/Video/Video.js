@@ -13,7 +13,7 @@ const Video = ({ url, type }) => {
 
   const options = {
     // lookup the options in the docs for more options
-    //autoplay: true,
+    autoplay: true,
     controls: true,
     responsive: true,
     fluid: true,

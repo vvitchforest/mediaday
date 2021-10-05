@@ -92,7 +92,7 @@ function App() {
               show={show}
               onHide={handleClose}
               scroll="true"
-              keyboard="true"
+              
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title className="mx-5 mt-2">MediaDay events</Offcanvas.Title>
