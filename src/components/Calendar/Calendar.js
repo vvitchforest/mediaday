@@ -19,8 +19,8 @@ const Calendar = () => (
       views={{
         timeGrid: {
           visibleRange: {
-            start: "2021-09-29",
-            end: "2021-10-02",
+            start: "2021-10-04",
+            end: "2021-10-07",
           },
         },
       }}

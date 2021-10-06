@@ -1,9 +1,10 @@
 import React from "react";
 import "./event.scss";
 import "../styles.scss";
-import { Col, Container, Row, Image, Alert } from "react-bootstrap";
+import { Col, Container, Row, Image, Alert} from "react-bootstrap";
 import { useParams } from "react-router";
-import BackButton from "../components/BackButton";
+
+
 
 import Video from "../components/Video/Video";
 import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
@@ -14,6 +15,7 @@ const EventPage = () => {
   const { id } = useParams();
 
   const eventResult = eventData.events.find(({ videoUrl }) => videoUrl === id);
+  console.log("event result", eventResult);
 
   if (!eventResult) {
     return <div>Event {id} was not found :(</div>;
@@ -24,16 +26,16 @@ const EventPage = () => {
     <Container fluid>
       <Row>
         <Col className="d-flex justify-content-start mt-3 mx-5">
-          <BackButton ></BackButton>
         </Col>
       </Row>
     </Container>
     <Container fluid="md">
-      <Row>
+      <Row className="mt-5">
         <Col className="d-flex flex-column align-items-center mb-3">
+          { eventResult.speaker.image ?
           <div className="gradient-border">
             <Image
-              src={eventResult?.speaker.image}
+              src={eventResult.speaker.image}
               alt="speaker"
               roundedCircle
               width="100%"
@@ -41,6 +43,9 @@ const EventPage = () => {
               className="speaker-img"
             />
           </div>
+          : 
+          <div className="pt-5"></div>
+          }
           <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
           <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
         </Col>

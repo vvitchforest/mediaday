@@ -30,7 +30,7 @@
       }
 
       & .vjs-icon-placeholder {
-        color: white;
+        color:#7699D4;
       }
 
      
@@ -41,23 +41,29 @@
         align-items: center;
     }
     
-   
 }
 
 
-.vjs-my-video-player .vjs-play-progress {
+.vjs-my-video-player .vjs-play-progress, .vjs-my-video-player .vjs-volume-level {
      background:linear-gradient(45deg, #7699D4, #9448BC); 
+     
 }
+
+
 
 
 /* Change the color of various "bars". */
-.vjs-my-video-player .vjs-volume-level,
+
 .vjs-my-video-player .vjs-slider-bar,
 .vjs-my-video-player .vjs-play-control {
     color: white;
    
 }
 
+.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus { 
+
+    background-color: rgba(0, 0, 0, 0.781);
+}
 
 
 
