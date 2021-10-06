@@ -9,20 +9,20 @@ const InfoCard = ({ number, title, text, icon }) => {
     document.title = "MediaDay"
 
     return (
-        <Card className="m-3 shadow p-3 mb-5 bg-light rounded">
-            <Card.Body className="d-flex bd-highlight">
-                <div className="p-3 w-100 bd-highlight">
-                    <Card.Subtitle className="mb-2">
+        <Card className="m-3 shadow p-3 mb-2 bg-light rounded fixed-size">
+            <Card.Body className="d-flex">
+                <div className="p-3 w-100">
+                    <Card.Subtitle className="mb-2 my-number">
                         {number}
                     </Card.Subtitle>
-                    <Card.Title>
+                    <Card.Title className="my-title">
                         {title}
                     </Card.Title>
-                    <Card.Text>
+                    <Card.Text className="my-text">
                         {text}
                     </Card.Text>
                 </div>
-                <div className="info-icons d-flex p-3 flex-shrink-1 bd-highlight align-items-start justify-content-start">
+                <div className="info-icons d-flex p-3 align-items-start justify-content-start">
                     <div className="info-icons">
                         {icon}
                         <Gradient />

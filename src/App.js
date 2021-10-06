@@ -12,7 +12,6 @@ import EventPage from "./pages/EventPage";
 import SchedulePage from "./pages/SchedulePage";
 import CountDown from "./components/CountDown/CountDown";
 import logo from "./logo.svg";
-import bgPicture from "./images/bg1.jpg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import eventData from "./data/events.json";
 import { Col, Container, Row, Image, Button } from "react-bootstrap";
@@ -23,22 +22,6 @@ import { ImBubbles3 } from "react-icons/im";
 import { BiLink } from "react-icons/bi";
 import DropdownItem from "@restart/ui/esm/DropdownItem";
 
-const Completionist = () => <span>You are good to go!</span>;
-
-// Renderer callback with condition
-const renderer = ({ hours, minutes, seconds, completed }) => {
-  if (completed) {
-    // Render a completed state
-    return <Completionist />;
-  } else {
-    // Render a countdown
-    return (
-      <span>
-        {hours}:{minutes}:{seconds}
-      </span>
-    );
-  }
-};
 
 function App() {
   return (
@@ -63,12 +46,12 @@ function App() {
           <Nav defaultActiveKey="/home" className="me-auto">
             <Nav.Item>
               <Nav.Link exact activeClassName="active" as={NavLink} to="/">
-                Home
+                MediaDay
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link exact activeClassName="active" as={NavLink} to="/about">
-                About
+                Meistä
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -78,10 +61,10 @@ function App() {
                 as={NavLink}
                 to="/schedule"
               >
-                Schedule
+                Aikataulu
               </Nav.Link>
             </Nav.Item>
-            <NavDropdown title="Events">
+            <NavDropdown title="Tapahtumat">
               {eventData.events.map(({ videoUrl, title }) => (
                 <NavDropdown.Item
                   key={title}
@@ -110,8 +93,9 @@ function App() {
         <Route path="/event/:id" children={<EventPage />} />
         <Route path="/">
           <header>
-            <Image src={bgPicture} className="img" />
+            <div className="img">
             <Container className="text-over-img">
+              <div className="extra-margin-left">
               <Row xs="auto">
                 <h1 className="display-2 mediaday">MEDIADAY</h1>
               </Row>
@@ -122,23 +106,28 @@ function App() {
                 <p className="header-txt">Metropolia ammattikorkeakoulu</p>
               </Row>
               <Row xs="auto">
-                <p className="header-txt">23.3.2022 Karaportti 2, Espoo</p>
+                <p className="header-txt">23.3.2022</p>
               </Row>
-              <Row className="justify-content-md-center extra-margin-top">
-                <Col md="auto">
+              <Row xs="auto">
+                <p className="header-txt">Karaportti 2, Espoo</p>
+              </Row>
+              </div>
+              <Row xs="auto"className="justify-content-center extra-margin-top">
+                <Col>
                   <Button variant="purple">Striimi</Button>
                 </Col>
               </Row>
-              <Row className="justify-content-md-center extra-margin-bottom mt-4">
-                <Col md="auto">
+              <Row xs="auto" className="justify-content-center extra-margin-bottom mt-2">
+                <Col>
                   <CountDown />
                 </Col>
               </Row>
             </Container>
+            </div>
           </header>
           <body>
             <Container>
-              <Row xs={1} md={2} className="g-4">
+              <Row xs={1} md={1} lg={2} className="g-4">
                 <Col>
                   <InfoCard
                     number="01"

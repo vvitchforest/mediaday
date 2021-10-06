@@ -1,28 +1,42 @@
 @import "base";
 
+.nav-space {
+  margin-top: 3em;
+}
+
 .img {
+  background: url("./images/bg1.jpg") no-repeat;
+  display: flex;
   height: 100vh;
-  width: 100%;
+  min-height: 600px;
+  flex: 1;
   z-index: 0;
+  align-items: center;
+  overflow: hidden; 
+  margin-top: 2em;
 }
 
 .text-over-img {
   z-index: 1; 
-	margin-top: -90vh; 
+}
+
+.extra-margin-left {
+  margin-left: 1em;
 }
 
 .mediaday {
-  background-color: $mybgColor;
-  padding: 0.3em 0.4em;
+  background-color: $myFloatColor;
+  padding: 0.3em 0.3em;
   border-radius: 10px;
-  margin: 15px;
-  color: $myColor;
+  margin: 0.07em;
+  margin-top: 1.5em;
+  color: $myButtoncolor;
   font-family: 'Libre Baskerville', serif;
 }
 
 .slogan-txt {
   @include text-bg;
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   color: $myColor;
   font-style: italic;
   font-size: calc(10px + 2vmin);
@@ -31,19 +45,21 @@
 
 .header-txt {
   @include text-bg;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   color: $myColor;
+  letter-spacing: 2px;
   font-size: calc(10px + 2vmin);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .extra-margin-top {
-  margin-top: 6em;
+  margin-top: 12vh;
 }
 
 .extra-margin-bottom {
   margin-bottom: 6em;
 }
+
 
 
 
