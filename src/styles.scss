@@ -90,7 +90,7 @@
    color: #CC3363;
  }
 
- .event-drawer {
+ .event-dropdown {
   font-family: "Nunito", sans-serif;
   letter-spacing: 1px;
   color: black;
@@ -100,16 +100,12 @@
    &:hover {
      color: black;
     background-color: #f3f3fb;
-    
-
    }
  }
 
- a.nav-link.event-drawer-active {
+ a.nav-link.event-dropdown-active {
   color: #CC3363;
  
-  
-  
  }
 
  

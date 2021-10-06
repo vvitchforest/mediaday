@@ -87,8 +87,8 @@ function App() {
                   key={title}
                   as={NavLink}
                   to={`/event/${videoUrl}`}
-                  className="event-drawer mb-3"
-                  activeClassName="event-drawer-active"
+                  className="event-dropdown mb-3"
+                  activeClassName="event-dropdown-active"
                 >
                   {title}
                 </NavDropdown.Item>
