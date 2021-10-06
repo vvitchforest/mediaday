@@ -3,7 +3,7 @@ import "./App.scss";
 import React, { useState } from "react";
 
 import { Switch, Route, Link, NavLink } from "react-router-dom";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./styles.scss";
 
 import AboutPage from "./pages/AboutPage";
@@ -15,12 +15,13 @@ import logo from "./logo.svg";
 import bgPicture from "./images/bg1.jpg";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import eventData from "./data/events.json";
-import { Col, Container, Row, Image, Button, Offcanvas } from "react-bootstrap";
+import { Col, Container, Row, Image, Button } from "react-bootstrap";
 import InfoCard from "./components/InfoCard/InfoCard";
 import { AiFillSmile } from "react-icons/ai";
 import { BiMoviePlay } from "react-icons/bi";
 import { ImBubbles3 } from "react-icons/im";
 import { BiLink } from "react-icons/bi";
+import DropdownItem from "@restart/ui/esm/DropdownItem";
 
 const Completionist = () => <span>You are good to go!</span>;
 
@@ -40,11 +41,6 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 };
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <div className="App">
       <Navbar
@@ -85,34 +81,19 @@ function App() {
                 Schedule
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={handleShow}>Events</Nav.Link>
-            </Nav.Item>
-            <Offcanvas
-              show={show}
-              onHide={handleClose}
-              scroll="true"
-              
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title className="mx-5 mt-2">MediaDay events</Offcanvas.Title>
-              </Offcanvas.Header>
-
-              <Offcanvas.Body className="fs-5">
-                {eventData.events.map(({ videoUrl, title }) => (
-                  <Nav.Item key={title}>
-                    <Nav.Link
-                      as={NavLink}
-                      to={`/event/${videoUrl}`}
-                      className="event-drawer mb-3"
-                      activeClassName="event-drawer-active"
-                    >
-                      {title}
-                    </Nav.Link>
-                  </Nav.Item>
-                ))}
-              </Offcanvas.Body>
-            </Offcanvas>
+            <NavDropdown title="Events">
+              {eventData.events.map(({ videoUrl, title }) => (
+                <NavDropdown.Item
+                  key={title}
+                  as={NavLink}
+                  to={`/event/${videoUrl}`}
+                  className="event-drawer mb-3"
+                  activeClassName="event-drawer-active"
+                >
+                  {title}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
           </Nav>
         </NavbarCollapse>
       </Navbar>
