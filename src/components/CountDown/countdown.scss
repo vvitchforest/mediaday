@@ -3,26 +3,27 @@
 .flex-container {
     width: 100%;
     display: flex;
-
 }
-
-@mixin text-bg {
-    background-color: $myFloatColor;
-    padding: 0.3em 1em;
-    border-radius: 10px;
-    margin: 15px;
-  }
 
 .space {
     @include text-bg;
-    font-family: 'Lora', serif;
+    @include my-shadow;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: calc(0.5em + 2vmin);
     text-align: center;
-    color: $myColor;
+    color: $myButtoncolor;
 }
 
-.font-wight {
+.font-weight {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: calc(1em + 2vmin);
+}
+
+.empty-space {
+    margin-top: 11em;
+}
+
+.margin-top {
+    margin-top: -0.5em;
 }

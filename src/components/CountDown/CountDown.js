@@ -1,9 +1,10 @@
 import React from "react";
 import "./countdown.scss";
+import { Col, Container, Row, Image, Button } from "react-bootstrap";
 
 const calculateTimeLeft = () => {
     const now = new Date().getTime();
-    const countDownDate = new Date("Oct 6, 2021 23:13:00").getTime();
+    const countDownDate = new Date("Mar 23, 2022 23:13:00").getTime();
     const difference = countDownDate - now;
 
     let timeLeft = {};
@@ -42,21 +43,21 @@ const CountDown = () => {
         }
 
         return (
-            <div className="space">
-                <div className="font-wight">
+            <Container className="space justify-content-center">
+                <Row className="font-weight justify-content-center">
                     {timeLeft[interval]}
-                </div>
-                <div>
+                </Row>
+                <Row className="margin-top">
                     {interval}
-                </div>
-            </div>
+                </Row>
+            </Container>
         );
     });
 
 
     return (
-        <div className="d-flex flex-row" md="auto">
-            {timerComponents.length ? timerComponents : ""}
+        <div className="d-flex flex-row" xs="auto">
+            {timerComponents.length ? timerComponents : <div className="empty-space"></div>}
         </div>
     );
 }
