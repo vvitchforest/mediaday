@@ -1,10 +1,8 @@
 import React from "react";
 import "./event.scss";
 import "../styles.scss";
-import { Col, Container, Row, Image, Alert} from "react-bootstrap";
+import { Col, Container, Row, Image, Alert } from "react-bootstrap";
 import { useParams } from "react-router";
-
-
 
 import Video from "../components/Video/Video";
 import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
@@ -23,92 +21,93 @@ const EventPage = () => {
 
   return (
     <>
-    <Container fluid>
-      <Row>
-        <Col className="d-flex justify-content-start mt-3 mx-5">
-        </Col>
-      </Row>
-    </Container>
-    <Container fluid="md">
-      <Row className="mt-5">
-        <Col className="d-flex flex-column align-items-center mb-3">
-          { eventResult.speaker.image ?
-          <div className="gradient-border">
-            <Image
-              src={eventResult.speaker.image}
-              alt="speaker"
-              roundedCircle
-              width="100%"
-              height="100%"
-              className="speaker-img"
-            />
-          </div>
-          : 
-          <div className="pt-5"></div>
-          }
-          <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
-          <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
-        </Col>
-        <Col lg={9} className="event-info">
-          <h1 className="display-5 mb-3 text-wrap">{eventResult.title}</h1>
-          <p className="fs-4 fw-light">{eventResult?.description}</p>
-        </Col>
-      </Row>
-      <Row className="mb-5">
-        <Col>
-          <WaitingForStream
-            startDate={eventResult.startDate}
-            startTime={eventResult.startTime}
-            endTime={eventResult.endTime}
-          >
-            {(streamHasStarted, streamHasEnded) => (
-              <>
-                {streamHasStarted && !streamHasEnded && (
-                  <Video
-                    url={eventResult.streamUrl}
-                    type={eventResult.streamVideoType}
+      <Container fluid>
+        <Row>
+          <Col className="d-flex justify-content-start mt-3 mx-5"></Col>
+        </Row>
+      </Container>
+      <Container fluid="md">
+        <Row className="mt-5">
+          <Col className="d-flex flex-column align-items-center mb-3">
+            {eventResult.speaker.image ? (
+              <div className="gradient-border">
+                <div className="speaker-image-container">
+                  <Image
+                    src={eventResult.speaker.image}
+                    alt="speaker"
+                    roundedCircle
+                    width="100%"
+                    height="100%"
+                    className="speaker-img"
                   />
-                )}
-                {!streamHasStarted && (
-                  <>
-                    <Video
-                      url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm"
-                      type="video/webm"
-                    />
-                    <Row className="justify-content-center">
-                      <Col>
-                        <Alert className="blue-overlay mt-3 shadow p-3 mb-5 rounded">
-                          Striimi alkaa {eventResult.startDate} klo.
-                          {eventResult.startTime} , tässä promo video
-                          (placeholder)
-                        </Alert>
-                      </Col>
-                    </Row>
-                  </>
-                )}
-                {streamHasEnded && (
-                  <>
-                    <Video
-                      url={eventResult.archiveVideoUrl}
-                      type={eventResult.archiveVideoType}
-                    />
-                    <Row className="justify-content-center">
-                      <Col>
-                        <Alert className="blue-overlay mt-5 shadow p-3 mb-5 rounded fs-5 fw-normal">
-                          Striimi tapahtumasta {eventResult.title} on päättynyt{" "}
-                          {eventResult.startDate} klo {eventResult.endTime},
-                          tässä tallenne (placeholder)
-                        </Alert>
-                      </Col>
-                    </Row>
-                  </>
-                )}
-              </>
+                </div>
+              </div>
+            ) : (
+              <div className="pt-5"></div>
             )}
-          </WaitingForStream>
-        </Col>
-      </Row>
-    </Container>
+            <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
+            <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
+          </Col>
+          <Col lg={9} className="event-info">
+            <h1 className="display-5 mb-3 text-wrap">{eventResult.title}</h1>
+            <p className="fs-4 fw-light">{eventResult?.description}</p>
+          </Col>
+        </Row>
+        <Row className="mb-5">
+          <Col>
+            <WaitingForStream
+              startDate={eventResult.startDate}
+              startTime={eventResult.startTime}
+              endTime={eventResult.endTime}
+            >
+              {(streamHasStarted, streamHasEnded) => (
+                <>
+                  {streamHasStarted && !streamHasEnded && (
+                    <Video
+                      url={eventResult.streamUrl}
+                      type={eventResult.streamVideoType}
+                    />
+                  )}
+                  {!streamHasStarted && (
+                    <>
+                      <Video
+                        url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm"
+                        type="video/webm"
+                      />
+                      <Row className="justify-content-center">
+                        <Col>
+                          <Alert className="blue-overlay mt-3 shadow p-3 mb-5 rounded">
+                            Striimi alkaa {eventResult.startDate} klo.
+                            {eventResult.startTime} , tässä promo video
+                            (placeholder)
+                          </Alert>
+                        </Col>
+                      </Row>
+                    </>
+                  )}
+                  {streamHasEnded && (
+                    <>
+                      <Video
+                        url={eventResult.archiveVideoUrl}
+                        type={eventResult.archiveVideoType}
+                      />
+                      <Row className="justify-content-center">
+                        <Col>
+                          <Alert className="blue-overlay mt-5 shadow p-3 mb-5 rounded fs-5 fw-normal">
+                            Striimi tapahtumasta {eventResult.title} on
+                            päättynyt {eventResult.startDate} klo{" "}
+                            {eventResult.endTime}, tässä tallenne (placeholder)
+                          </Alert>
+                        </Col>
+                      </Row>
+                    </>
+                  )}
+                </>
+              )}
+            </WaitingForStream>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
