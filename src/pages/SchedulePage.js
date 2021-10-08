@@ -7,10 +7,10 @@ import Calendar from "../components/Calendar/Calendar";
 const SchedulePage = () => {
 
   return (
-    <Container>
-      <h1 className="display-2">Event schedule</h1>
+    <Container className="pt-5 text-center">
+      <h1 className="display-2 py-5">Event schedule</h1>
       <Row className="justify-content-md-center">
-        <Col lg={6}>
+        <Col md={12} lg={6} className="bg-light p-3 shadow rounded">
           <Calendar />
         </Col>
       </Row>

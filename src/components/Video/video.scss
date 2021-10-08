@@ -3,7 +3,7 @@
     color: white;
 }
 
-/* Change the border of the big play button. */
+/* Gradient border for big button, webkit mask not working in Safari
 .vjs-my-video-player .vjs-big-play-button {
 
     color: white;
@@ -41,35 +41,44 @@
         align-items: center;
     }
     
+} */
+
+.vjs-my-video-player .vjs-big-play-button {
+    position: absolute;
+    box-sizing: border-box;
+    background: #000;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(118, 153, 212, 0.6), rgba(149, 73, 190, 0.6));
+    border: transparent;
+    width: 1.75em;
+    height: 1.75em;
+
+    & .vjs-icon-placeholder::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-
-.vjs-my-video-player .vjs-play-progress, .vjs-my-video-player .vjs-volume-level {
-     background:linear-gradient(45deg, #7699D4, #9448BC); 
-     
+.vjs-my-video-player .vjs-play-progress,
+.vjs-my-video-player .vjs-volume-level {
+    background: linear-gradient(45deg, #7699d4, #9448bc);
 }
-
-
-
 
 /* Change the color of various "bars". */
 
 .vjs-my-video-player .vjs-slider-bar,
 .vjs-my-video-player .vjs-play-control {
     color: white;
-   
 }
 
-.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus { 
-
+.video-js:hover .vjs-big-play-button,
+.video-js .vjs-big-play-button:focus {
     background-color: rgba(0, 0, 0, 0.781);
 }
-
-
 
 @media only screen and (min-width: 500px) {
     .vjs-my-video-player.video-js {
         font-size: 1.25em;
     }
-   
-  }
+}
