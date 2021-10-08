@@ -1,0 +1,26 @@
+@import "../../base";
+
+@mixin logo-boxes {
+    @include my-shadow;
+    padding: 1em;
+    margin: 1em;
+  }
+
+.white {
+    @include logo-boxes;
+    background-color: white; 
+}
+
+.black {
+    @include logo-boxes;
+    background-color: black; 
+}
+
+.sponsor-heading {
+    margin: 1em 1em;
+    margin-top: 3.5em;
+    color: $myButtoncolor;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: calc(1em + 2vw);
+}

@@ -8,6 +8,7 @@ import { AiFillSmile } from "react-icons/ai";
 import { BiMoviePlay } from "react-icons/bi";
 import { ImBubbles3 } from "react-icons/im";
 import { BiLink } from "react-icons/bi";
+import Sponsors from "../components/Sponsors/Sponsors";
 
 
 const Home = () => {
@@ -101,6 +102,7 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
+                <Sponsors />
             </body>
             <div ref={toStreamRef} >TEST</div>
 

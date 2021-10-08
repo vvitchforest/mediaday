@@ -1,0 +1,55 @@
+{
+    "sponsors": [
+      {
+        "name": "Avita",
+        "image": "/images/sponsors/avita_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Crestron",
+        "image": "/images/sponsors/crestron_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Fireframe",
+        "image": "/images/sponsors/fireframe_logo.jpg",
+        "bg": "black"
+      },
+      {
+        "name": "flyAR",
+        "image": "/images/sponsors/flyAR_logo.jpg",
+        "bg": "black"
+      },
+      {
+        "name": "Foodandco",
+        "image": "/images/sponsors/foodandco_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Metropolia",
+        "image": "/images/sponsors/metropolia_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Panasonic",
+        "image": "/images/sponsors/panasonic_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Sony",
+        "image": "/images/sponsors/sony_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Swappie",
+        "image": "/images/sponsors/swappie_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Trail",
+        "image": "/images/sponsors/trail_logo.jpg",
+        "bg": "white"
+      }
+    ]
+}
+  
