@@ -1,14 +1,15 @@
 import "./App.scss";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-import { Switch, Route, Link, NavLink } from "react-router-dom";
+import { Switch, Route, Link, NavLink, useLocation} from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./styles.scss";
 
 import AboutPage from "./pages/AboutPage";
 import PromoVideo from "./pages/PromoVideo";
 import EventPage from "./pages/EventPage";
+import StreamOnHomePage from "./pages/StreamOnHomePage";
 import SchedulePage from "./pages/SchedulePage";
 import CountDown from "./components/CountDown/CountDown";
 import logo from "./logo.svg";
@@ -24,6 +25,18 @@ import DropdownItem from "@restart/ui/esm/DropdownItem";
 
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [location]);
+
+  const toStreamRef = useRef();
+
+  function handleBackClick() {
+    toStreamRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="App">
       <Navbar
@@ -114,7 +127,10 @@ function App() {
               </div>
               <Row xs="auto"className="justify-content-center extra-margin-top">
                 <Col>
-                  <Button variant="purple">Striimi</Button>
+                  <Button variant="purple"
+                  onClick={handleBackClick}
+                  >Striimi</Button>
+
                 </Col>
               </Row>
               <Row xs="auto" className="justify-content-center extra-margin-bottom mt-2">
@@ -126,6 +142,9 @@ function App() {
             </div>
           </header>
           <body>
+          <Container>
+          <StreamOnHomePage/>
+          </Container>
             <Container>
               <Row xs={1} md={1} lg={2} className="g-4">
                 <Col>
@@ -165,6 +184,7 @@ function App() {
           </body>
         </Route>
       </Switch>
+      <div ref={toStreamRef} >TEST</div>
     </div>
   );
 }
