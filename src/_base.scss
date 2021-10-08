@@ -13,6 +13,7 @@ $mybgColor: rgba(255, 255, 255, 0.7);
 $myButtoncolor:#CC3363;
 $myFloatColor: rgba(255, 255, 255, 1);
 $myFloatColorRed: rgba(72, 3, 85, 0.7);
+$mySecondaryColor: #ddcfe6;
 
 @mixin text-bg {
     background-color: $myFloatColor;

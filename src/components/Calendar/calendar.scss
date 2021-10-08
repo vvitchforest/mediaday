@@ -1,5 +1,51 @@
 @import '../../base';
 
+.my-calendar-title, .my-calendar-subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 1px;  
+}
+
+.my-calendar-subtitle {
+    font-size: 1.25em;
+}
+
+.my-event {
+    margin-bottom: 0.25em;
+    padding-left: 1em;  
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 1px; 
+}
+
+.my-event-title {
+    font-size: 1.25em;
+}
+
+.my-event-time, .my-event-speaker {
+    font-size: 1em;
+}
+
+
+.fc .fc-timegrid-now-indicator-container {
+    background-color: white;
+}
+
+
+
+@media only screen and (min-width: 780px) { 
+    .my-event {
+        padding-left: 2em;
+        padding-top: 0.25em;   
+    }
+
+    .my-event-time, .my-event-speaker {
+        font-size: 1.25em;
+    }
+
+    .my-event-title {
+        font-size: 1.75em;
+    }
+  }
+
 
 
 
