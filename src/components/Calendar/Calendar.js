@@ -1,6 +1,4 @@
 import React from "react";
-import { Tooltip, OverlayTrigger, Button } from "react-bootstrap";
-
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
@@ -10,30 +8,25 @@ import eventData from "../../data/events.json";
 
 const Calendar = () => {
   const onMouseEnter = (target) => {
-    target.event.setProp("backgroundColor", "magenta");
+    target.event.setProp("backgroundColor", "#9448BC");
+    target.event.setProp("textColor", "white");
   };
 
   const onMouseLeave = (target) => {
-    target.event.setProp("backgroundColor", "grey");
+    target.event.setProp("backgroundColor", "rgb(99, 180, 209)");
+    target.event.setProp("textColor", "black");
   };
 
   const renderEventContent = (eventInfo) => {
     return (
-      <>
-        <OverlayTrigger
-          placement="bottom"
-          overlay={<Tooltip>{eventInfo.event.extendedProps.description}</Tooltip>}
-        >
-          {({ ref, ...triggerHandler }) => (
-            <div {...triggerHandler}>
-              <b>{eventInfo.event.extendedProps.description}</b>
-              <p>
-                <i>{eventInfo.event.title}</i>
-              </p>
-            </div>
-          )}
-        </OverlayTrigger>
-      </>
+      <div>
+        <p>
+          <b>{eventInfo.event.title}</b>
+          <br></br>
+          <i>{eventInfo.event.extendedProps.speaker}</i>
+      
+        </p>
+      </div>
     );
   };
 
@@ -42,12 +35,11 @@ const Calendar = () => {
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
-        initialDate="2021-10-06"
-        headerToolbar={false}
+        initialDate="2021-10-08"
         slotMinTime="09:00:00"
         slotMaxTime="20:00:00"
         height={600}
-        eventBackgroundColor="grey"
+        eventBackgroundColor="rgb(99, 180, 209)"
         eventTextColor="black"
         allDaySlot={false}
         dayHeaders={false}
@@ -72,13 +64,17 @@ const Calendar = () => {
             .split(":")
             .map(Number);
           const [endHour, endMinute] = data.endTime.split(":").map(Number);
+          
 
           return {
+            
             title: data.title,
             start: new Date(year, month - 1, day, startHour, startMinute),
             end: new Date(year, month - 1, day, endHour, endMinute),
             url: `#/event/${data.videoUrl}`,
             description: data?.description,
+            speaker: data.speaker.name,
+            className: "my-event",
           };
         })}
       />
