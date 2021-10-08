@@ -1,0 +1,89 @@
+{
+  "events": [
+    {
+      "videoUrl": "mediaday-01",
+      "title": "Tulevaisuuden ratkaisut elokuvatuotannossa",
+      "speaker": {
+          "name":  "Mikko Kodisoja",
+          "company": "Fireframe",
+          "image": "/images/mikko_kodisoja.jpg"
+      }, 
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "startDate": "8.10.2021",
+      "description": "Yrityksen perustaja Mikko Kodisoja kertoo, miksi vaihtoi peliteollisuuden elokuvamaailmaan. Kuumana puheenaiheena Suomen ensimmäinen Hollywood-tason ledseinä-studio. Puheenvuoro esitetään englanniksi.",
+      "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+      "streamVideoType": "application/x-mpegurl",
+      "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+      "archiveVideoType": "video/mp4"
+    },
+    {
+      "videoUrl": "mediaday-02",
+      "title": "Käyttäjäkokemuksen merkitys IT-järjestelmissä",
+      "speaker": {
+          "name": "Sami Marttinen",
+          "company": "Swappie",
+          "image": "/images/sami_marttinen.jpg"
+      }, 
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "startDate": "8.10.2021",
+      "description": "Sami Marttinen esittelee Swappien tarinan, ja teknologian merkityksen yrityksen nousun taustalla. Puheenvuoro esitetään suomeksi.",
+      "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+      "streamVideoType": "application/x-mpegurl",
+      "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+      "archiveVideoType": "video/mp4"
+    },
+    {
+      "videoUrl": "mediaday-03",
+      "title": "Yrittäjyys korkean teknologian alalla",
+      "speaker": {
+          "name": "Frans Tihveräinen",
+          "company": "FlyAR",
+          "image": "/images/frans_tihverainen.jpg"
+      },
+      "startTime": "12:00",
+      "endTime": "14:00",
+      "startDate": "8.10.2021",
+      "description": "Erilainen urapolku - Frans Tihveräinen: Suoraan koulun penkiltä pitkän linjan AR-ammattilaiseksi. Frans kertoo omasta nousustaan AR-ammattilaiseksi, ja esittelee omat vinkkinsä yrittäjyydestä haaveileville opiskelijoille. Puheenvuoro esitetään suomeksi.",
+      "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+      "streamVideoType": "application/x-mpegurl",
+      "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+      "archiveVideoType": "video/mp4"
+    },
+
+    {
+      "videoUrl": "mediaday-04",
+      "title": "Kamerauutuudet indie-tuotannossa",
+      "speaker": {
+          "name":  "Ulrich Mors",
+          "company": "Sony",
+          "image": "/images/Ulrich_Mors.jpg"
+      },
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "startDate": "8.10.2021",
+      "description": "Ulrich Mors esittelee Sonyn uusimmat videokamerauutuudet ammattimaisten videotuotantojen käyttöön. Näkökulmana kameroiden käyttö eurooppalaisessa indie-elokuvatuotannossa, josta Ulrichilla on itsessään paljon kokemusta. Puheenvuoro esitetään englanniksi.", 
+      "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+      "streamVideoType": "application/x-mpegurl",
+      "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+      "archiveVideoType": "video/mp4"
+    },
+
+    {
+      "videoUrl": "mediaday-05",
+      "title": "Minne menet, suomalainen AV-ala?",
+      "speaker": {
+          "name":  "Mika Vakkilainen",
+          "company": "Avita ry"
+      },
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "startDate": "8.10.2021",
+      "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
+      "streamVideoType": "application/x-mpegurl",
+      "archiveVideoUrl": "//vjs.zencdn.net/v/oceans.mp4",
+      "archiveVideoType": "video/mp4"
+    }
+  ]
+}
