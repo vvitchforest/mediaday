@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import StreamOnHomePage from "./StreamOnHomePage";
+import StreamOnHomePage from "../components/StreamOnHomePage/StreamOnHomePage";
 import CountDown from "../components/CountDown/CountDown";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import InfoCard from "../components/InfoCard/InfoCard";

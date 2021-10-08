@@ -1,13 +1,13 @@
 import React from "react";
-import "./event.scss";
-import "../styles.scss";
+import "../../pages/event.scss";
+import "../../styles.scss";
 import { Col, Container, Row, Image, Alert } from "react-bootstrap";
 
 
-import Video from "../components/Video/Video";
-import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
+import Video from "../Video/Video";
+import WaitingForStream from "../WaitingForStream/WaitingForStream";
 
-import eventData from "../data/events.json";
+//import eventData from "../data/events.json";
 
 const StreamOnHomePage = () => {
 
