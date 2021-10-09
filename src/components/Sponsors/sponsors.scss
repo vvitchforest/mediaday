@@ -2,8 +2,9 @@
 
 @mixin logo-boxes {
     @include my-shadow;
-    padding: 1em;
-    margin: 1em;
+    padding: 3vh;
+    height: 16vh;
+    width: auto;
   }
 
 .white {
@@ -23,4 +24,40 @@
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     font-size: calc(1em + 2vw);
+}
+
+.correct-size {
+    display: flex;
+    justify-content: space-around;
+    height: 18vh;
+    width: auto;
+    object-fit: cover
+}
+
+@media (max-width: 575.98px) {
+    .white {
+        @include logo-boxes;
+        padding-left: 20em;
+        padding-right: 20em;
+        background-color: white; 
+    }
+    
+    .black {
+        @include logo-boxes;
+        padding-left: 20em;
+        padding-right: 20em;
+        background-color: black; 
+    }
+
+    .sponsor-heading {
+        text-align: center;
+        margin: 1em 0;
+        margin-top: 3em;
+    }
+}
+
+@media (max-width: 280px) {
+    .sponsor-heading {
+        font-size: calc(0.7em + 2vw);
+    }
 }

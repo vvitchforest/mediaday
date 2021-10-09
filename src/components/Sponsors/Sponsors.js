@@ -45,12 +45,14 @@ const Sponsors = () => {
 
         console.log("sponsor result", sponsorImage);
         return (
-            <Col className="d-flex align-content-center">
-                <Image
-                    src={sponsorImage}
-                    alt={sponsorName}
-                    className={myClass}
-                />
+            <Col className="d-flex align-self-center justify-content-center">
+                <div className="correct-size">
+                    <Image
+                        src={sponsorImage}
+                        alt={sponsorName}
+                        className={myClass}
+                    />
+                </div>
             </Col>
         )
     });

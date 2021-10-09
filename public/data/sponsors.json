@@ -1,8 +1,18 @@
 {
     "sponsors": [
       {
-        "name": "Avita",
-        "image": "/images/sponsors/avita_logo.jpg",
+        "name": "flyAR",
+        "image": "/images/sponsors/flyAR_logo.jpg",
+        "bg": "black"
+      },
+      {
+        "name": "Metropolia",
+        "image": "/images/sponsors/metropolia_logo.jpg",
+        "bg": "white"
+      },
+      {
+        "name": "Foodandco",
+        "image": "/images/sponsors/foodandco_logo.jpg",
         "bg": "white"
       },
       {
@@ -11,23 +21,8 @@
         "bg": "white"
       },
       {
-        "name": "Fireframe",
-        "image": "/images/sponsors/fireframe_logo.jpg",
-        "bg": "black"
-      },
-      {
-        "name": "flyAR",
-        "image": "/images/sponsors/flyAR_logo.jpg",
-        "bg": "black"
-      },
-      {
-        "name": "Foodandco",
-        "image": "/images/sponsors/foodandco_logo.jpg",
-        "bg": "white"
-      },
-      {
-        "name": "Metropolia",
-        "image": "/images/sponsors/metropolia_logo.jpg",
+        "name": "Sony",
+        "image": "/images/sponsors/sony_logo.jpg",
         "bg": "white"
       },
       {
@@ -36,13 +31,18 @@
         "bg": "white"
       },
       {
-        "name": "Sony",
-        "image": "/images/sponsors/sony_logo.jpg",
+        "name": "Swappie",
+        "image": "/images/sponsors/swappie_logo.jpg",
         "bg": "white"
       },
       {
-        "name": "Swappie",
-        "image": "/images/sponsors/swappie_logo.jpg",
+        "name": "Fireframe",
+        "image": "/images/sponsors/fireframe_logo.jpg",
+        "bg": "black"
+      },
+      {
+        "name": "Avita",
+        "image": "/images/sponsors/avita_logo.jpg",
         "bg": "white"
       },
       {
