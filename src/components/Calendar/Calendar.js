@@ -3,10 +3,13 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 import "./calendar.scss";
-
-import eventData from "../../data/events.json";
+import EventFetch from "../../EventFetch";
 
 const Calendar = () => {
+
+  const url = "/data/events.json";
+  const eventData = EventFetch(url)
+
   const onMouseEnter = (target) => {
     target.event.setProp("backgroundColor", "#8986ba");
     target.event.setProp("textColor", "white");
@@ -54,7 +57,7 @@ const Calendar = () => {
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
-        initialDate="2021-10-08"
+        initialDate="2021-10-10"
         slotMinTime="10:00:00"
         slotMaxTime="18:00:00"
         nowIndicator={true}
@@ -83,11 +86,9 @@ const Calendar = () => {
         eventMouseEnter={onMouseEnter}
         eventMouseLeave={onMouseLeave}
         eventContent={renderEventContent}
-        events={eventData.events.map((data) => {
+        events={eventData?.events.map((data) => {
           const [day, month, year] = data.startDate.split(".").map(Number);
-          const [startHour, startMinute] = data.startTime
-            .split(":")
-            .map(Number);
+          const [startHour, startMinute] = data.startTime.split(":").map(Number);
           const [endHour, endMinute] = data.endTime.split(":").map(Number);
 
           return {
