@@ -4,9 +4,11 @@ import "./styles.scss";
 import { Switch, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import EventPage from "./pages/EventPage";
+import ContactPage from "./pages/ContactPage";
 import Home from "./pages/Home";
 import SchedulePage from "./pages/SchedulePage";
 import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -20,8 +22,11 @@ function App() {
             renders the first one that matches the current URL. */}
 
       <Switch>
+        <Route path="/contact">
+          <ContactPage />
+        </Route>
         <Route path="/about">
-          <AboutPage name="Irina" />
+          <AboutPage/>
         </Route>
         <Route path="/schedule">
           <SchedulePage />
@@ -31,6 +36,7 @@ function App() {
         </Route>
       </Switch>
 
+      <Footer />
 
     </div>
   );

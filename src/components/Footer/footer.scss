@@ -1,0 +1,31 @@
+@import "../../base";
+
+.my-bgColor {
+    margin-top: 6em;
+    background-color: $myPurpleColor;
+}
+
+.bi {
+    color:white;
+    margin: 0em 0.1em;
+    font-size: 4vh;
+}
+
+.footer-links, .footer-text{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    padding: 0.5em 0.7em;
+}
+
+  a:hover, .bi:hover {
+    text-decoration: underline;
+    color: $myLinkHoverColor;
+  }
+
+  @media (max-width: 360px) {
+    .footer-text{
+        text-align: center;
+    }
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import About from '../components/About/About';
 
-const AboutPage = ({ name }) => (
-    <About name={name} />
+const AboutPage = () => (
+    <About />
 );
 
 

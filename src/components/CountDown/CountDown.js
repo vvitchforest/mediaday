@@ -1,6 +1,6 @@
 import React from "react";
 import "./countdown.scss";
-import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 
 const calculateTimeLeft = () => {
     const now = new Date().getTime();
