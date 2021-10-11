@@ -37,7 +37,7 @@
 .slogan-txt {
   @include text-bg;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $myColor;
+  color: $myPurpleColor;
   font-style: italic;
   font-size: calc(10px + 2vmin);
   font-weight: 700;
@@ -46,7 +46,7 @@
 .header-txt {
   @include text-bg;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $myColor;
+  color: $myPurpleColor;
   letter-spacing: 2px;
   font-size: calc(10px + 2vmin);
   font-weight: 700;
@@ -60,6 +60,10 @@
   margin-bottom: 6em;
 }
 
+.my-stream{
+  margin-top: 8vw;
+  margin-bottom: 8vw;
+}
 
 
 

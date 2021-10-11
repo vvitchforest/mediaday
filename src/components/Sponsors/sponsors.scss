@@ -2,8 +2,9 @@
 
 @mixin logo-boxes {
     @include my-shadow;
-    padding: 3vh;
-    height: 16vh;
+    padding: 1vh;
+    height: 10vh;
+    max-height: 5em;
     width: auto;
   }
 
@@ -18,9 +19,9 @@
 }
 
 .sponsor-heading {
-    margin: 1em 1em;
-    margin-top: 3.5em;
-    color: $myButtoncolor;
+    margin: 0.7em 1em;
+    margin-top: 2.5em;
+    color: $myPurpleColor;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     font-size: calc(1em + 2vw);
@@ -29,23 +30,21 @@
 .correct-size {
     display: flex;
     justify-content: space-around;
-    height: 18vh;
+    height: 12vh;
+    max-height: 7em;
     width: auto;
-    object-fit: cover
+    object-fit: cover;
+    overflow: hidden;
 }
 
 @media (max-width: 575.98px) {
     .white {
         @include logo-boxes;
-        padding-left: 20em;
-        padding-right: 20em;
         background-color: white; 
     }
     
     .black {
         @include logo-boxes;
-        padding-left: 20em;
-        padding-right: 20em;
         background-color: black; 
     }
 

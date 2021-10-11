@@ -1,14 +1,15 @@
 @import "../../base";
 
 .my-bgColor {
-    margin-top: 6em;
     background-color: $myPurpleColor;
 }
 
-.bi {
-    color:white;
-    margin: 0em 0.1em;
-    font-size: 4vh;
+.icon-links {
+    .bi {
+        color:white;
+        margin: 0em 0.1em;
+        font-size: 4vh;
+    } 
 }
 
 .footer-links, .footer-text{

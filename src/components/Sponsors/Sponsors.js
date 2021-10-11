@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./sponsors.scss";
-import { Col, Container, Row, Image, Alert } from "react-bootstrap";
+import { Col, Container, Row, Image} from "react-bootstrap";
 
 
 //import eventData from "../data/events.json";
@@ -58,13 +58,13 @@ const Sponsors = () => {
     });
 
     return (
-        <Container>
-            <Row>
+        <Container className="mb-4">
+            <Row xs="auto" className="justify-content-center">
                 <h2 className="sponsor-heading">
-                    YHTEISTYÖKUMPPANIT
+                    MUKANA MEDIADAY'SSÄ
                 </h2>
             </Row>
-            <Row >
+            <Row xs="auto" className="justify-content-center">
                 {sponsorResult}
             </Row>
         </Container>

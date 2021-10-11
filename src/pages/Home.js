@@ -9,6 +9,7 @@ import { BiMoviePlay } from "react-icons/bi";
 import { ImBubbles3 } from "react-icons/im";
 import { BiLink } from "react-icons/bi";
 import Sponsors from "../components/Sponsors/Sponsors";
+import ButtonUp from "../components/ButtonUp/ButtonUp";
 
 
 const Home = () => {
@@ -63,9 +64,10 @@ const Home = () => {
                 </div>
             </header>
             <body>
-                <Container>
-                    <StreamOnHomePage />
+                <Container className="my-stream">
+                    <StreamOnHomePage ref={toStreamRef}/>
                 </Container>
+                <ButtonUp />
                 <Container>
                     <Row xs={1} md={1} lg={2} className="g-4">
                         <Col>
@@ -104,8 +106,6 @@ const Home = () => {
                 </Container>
                 <Sponsors />
             </body>
-            <div ref={toStreamRef} >TEST</div>
-
         </>
     );
 };

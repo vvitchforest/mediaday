@@ -1,0 +1,22 @@
+@import "../../base";
+
+.bi-arrow-up-square-fill {
+    color: $myButtoncolor;
+    font-size: 8vh;
+}
+
+#up-arrow {
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    padding: 0.5vh 2vh;
+    z-index: 1;
+}
+
+.up-arrow-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    right: 15px;
+    padding: 0.5vh 2vh;
+}
