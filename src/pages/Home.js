@@ -35,13 +35,13 @@ const Home = () => {
                                 <h1 className="display-2 mediaday">MEDIADAY</h1>
                             </Row>
                             <Row xs="auto">
+                                <p className="header-txt other-color">23.3.2022</p>
+                            </Row>
+                            <Row xs="auto">
                                 <p className="slogan-txt">LET'S GET INSPIRED!</p>
                             </Row>
                             <Row xs="auto">
                                 <p className="header-txt">Metropolia ammattikorkeakoulu</p>
-                            </Row>
-                            <Row xs="auto">
-                                <p className="header-txt">23.3.2022</p>
                             </Row>
                             <Row xs="auto">
                                 <p className="header-txt">Karaportti 2, Espoo</p>

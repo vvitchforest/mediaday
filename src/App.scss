@@ -25,6 +25,7 @@
 }
 
 .mediaday {
+  @include my-shadow;
   background-color: $myFloatColor;
   padding: 0.3em 0.3em;
   border-radius: 10px;
@@ -36,8 +37,9 @@
 
 .slogan-txt {
   @include text-bg;
+  background-color: $myLinkHoverColor;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $myPurpleColor;
+  color: white;
   font-style: italic;
   font-size: calc(10px + 2vmin);
   font-weight: 700;
@@ -45,11 +47,18 @@
 
 .header-txt {
   @include text-bg;
+  background-color: $myPurpleColor;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: $myPurpleColor;
+  color: white;
   letter-spacing: 2px;
   font-size: calc(10px + 2vmin);
   font-weight: 700;
+}
+
+.other-color {
+  @include my-shadow;
+  background-color: white;
+  color: $myButtoncolor;
 }
 
 .extra-margin-top {
