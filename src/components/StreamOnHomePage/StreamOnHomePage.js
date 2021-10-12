@@ -1,12 +1,13 @@
-import React from "react";
+import React, { forwardRef} from 'react'
 import "../../pages/event.scss";
 import "../../styles.scss";
-import { Col, Container, Row, Alert, Badge } from "react-bootstrap";
+import { Col, Row} from "react-bootstrap";
 import Video from "../Video/Video";
 import EventFetch from "../../EventFetch";
 import { BiBroadcast } from "react-icons/bi";
 
-const StreamOnHomePage = () => {
+// eslint-disable-next-line no-empty-pattern
+const StreamOnHomePage = forwardRef(({}, ref) => {
   const url = "/data/events.json";
   const eventResult = EventFetch(url);
   console.log("event result mikä oot", eventResult);
@@ -36,7 +37,7 @@ const StreamOnHomePage = () => {
 
   return (
     <>
-      <Row className="mb-5">
+      <Row className="mb-5" ref={ref}>
         <Col>
           {ongoingEvent ? (
             <>
@@ -68,6 +69,6 @@ const StreamOnHomePage = () => {
       </Row>
     </>
   );
-};
+});
 
 export default StreamOnHomePage;
