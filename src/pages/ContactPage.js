@@ -1,9 +1,11 @@
 import React from 'react';
+import ContactForm from '../components/ContactForm/ContactForm';
+import { Container } from "react-bootstrap";
 
 const ContactPage = () => (
-<>
-<div>Contact Page</div>
-</>
+<Container className="pt-5 mt-5 full-height">
+    <ContactForm />
+</Container>
 );
 
 
