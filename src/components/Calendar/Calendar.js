@@ -57,7 +57,7 @@ const Calendar = () => {
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
-        initialDate="2021-10-10"
+        initialDate="2021-10-12"
         slotMinTime="10:00:00"
         slotMaxTime="18:00:00"
         nowIndicator={true}

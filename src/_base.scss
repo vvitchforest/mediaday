@@ -16,6 +16,8 @@ $myFloatColorRed: rgba(72, 3, 85, 0.7);
 $mySecondaryColor: #ddcfe6;
 $myPurpleColor: #9448BC;
 $myLinkHoverColor: #6aa0fc;
+$gradientColor:linear-gradient(220deg, #CC3363, #9448BC);
+$hoverColor: #9448BC;
 
 @mixin text-bg {
     background-color: $myFloatColor;

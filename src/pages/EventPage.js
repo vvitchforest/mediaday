@@ -8,34 +8,30 @@ import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
 
 //import eventData from "../data/events.json";
 
-
-
 const EventPage = () => {
   const { id } = useParams();
   const [eventData, setEventData] = useState();
 
-    const getEvents = async() =>{
-        try {
-          const options = {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          };
-            const response = await fetch('/data/events.json', options);
-            const responseJson = await response.json();
+  const getEvents = async () => {
+    try {
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const response = await fetch("/data/events.json", options);
+      const responseJson = await response.json();
 
-            setEventData(responseJson);
+      setEventData(responseJson);
+    } catch (err) {
+      console.log("error, no json", err);
+    }
+  };
 
-        } catch (err) {
-            console.log('error, no json', err);
-        }
-    };
-
-    useEffect(() => {
-        getEvents();
-    }, [])
-
+  useEffect(() => {
+    getEvents();
+  }, []);
 
   const eventResult = eventData?.events.find(({ videoUrl }) => videoUrl === id);
   console.log("event result", eventResult);
@@ -46,16 +42,13 @@ const EventPage = () => {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid="md" className="event-container">
         <Row>
-          <Col className="d-flex justify-content-start mt-3 mx-5">
-          </Col>
+          <Col className="mt-5"></Col>
         </Row>
-      </Container>
-      <Container fluid="md">
         <Row className="mt-5">
           <Col className="d-flex flex-column align-items-center mb-3">
-            {eventResult.speaker.image ?
+            {eventResult.speaker.image ? (
               <div className="gradient-border">
                 <Image
                   src={eventResult.speaker.image}
@@ -63,17 +56,17 @@ const EventPage = () => {
                   roundedCircle
                   width="100%"
                   height="100%"
-                  className="speaker-img"
+                  className="speaker-img p-2"
                 />
               </div>
-              :
+            ) : (
               <div className="pt-5"></div>
-            }
+            )}
             <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
             <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
           </Col>
           <Col lg={9} className="event-info">
-            <h1 className="display-5 mb-3 text-wrap">{eventResult.title}</h1>
+            <h1 className="my-2 fs-1 text-wrap">{eventResult.title}</h1>
             <p className="fs-4 fw-light">{eventResult?.description}</p>
           </Col>
         </Row>
@@ -118,9 +111,9 @@ const EventPage = () => {
                       <Row className="justify-content-center">
                         <Col>
                           <Alert className="blue-overlay mt-5 shadow p-3 mb-5 rounded fs-5 fw-normal">
-                            Striimi tapahtumasta {eventResult.title} on päättynyt{" "}
-                            {eventResult.startDate} klo {eventResult.endTime},
-                            tässä tallenne (placeholder)
+                            Striimi tapahtumasta {eventResult.title} on
+                            päättynyt {eventResult.startDate} klo{" "}
+                            {eventResult.endTime}, tässä tallenne (placeholder)
                           </Alert>
                         </Col>
                       </Row>

@@ -1,101 +1,122 @@
+@import "./base";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito+Sans:wght@300;400;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito+Sans:wght@300;400;700&display=swap');
-.blue-overlay {
-    background-color: rgba(99, 180, 209, 0.5);
-    color: black;
-    border: none;
-    font-weight: 600;
-    font-size: 1.25em;
-  }
-  
-  .gradient-border {
-   position: relative;
-   display: flex; 
-   justify-content: center;
-   align-items: center;
-   height: 230px;
-   width: 230px;
-   background:linear-gradient(45deg, #7699D4, #9448BC); 
-   border-radius: 50%;
-  }
-
-.speaker-image-container {
-  height: 100%;
-  width: 100%; 
-  padding: 10px;
+.main-video-title-container {
+  @include text-bg;
 }
 
-  .back-button {
-    background-color: #CC3363;
+.main-video-title-container > h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: $myButtoncolor;
+  letter-spacing: 2px;
+  font-size: calc(10px + 2vmin);
+  font-weight: 700;
+}
+
+.custom-badge-container {
+  background: $gradientColor;
+}
+
+.custom-badge {
+  background-color: white;
+  color: black;
+  font-size: 0.5em;
+  letter-spacing: 1px;
+}
+
+.ongoing-event-date,
+.ongoing-event-time {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+
+
+.back-button {
+  background-color: #cc3363;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: #94284a;
     color: white;
     border: none;
-
-    &:hover {
-        background-color: #94284a;
-        color: white;
-        border: none;
-        
-    }
-
-    &:active {
-        background-color: #CC3363;
-        border: none;
-        color: white;
-    }
-
-    &:focus {
-        background-color: #CC3363;
-        border: none;
-        color: white;
-
-    }
   }
 
-  .offcanvas-backdrop.show {
-    opacity: 0;
-
+  &:active {
+    background-color: #cc3363;
+    border: none;
+    color: white;
   }
 
- .navbar {
-   background-color: white;
- }
+  &:focus {
+    background-color: #cc3363;
+    border: none;
+    color: white;
+  }
+}
 
- .me-auto.navbar-nav {
-   
-   font-family: "Nunito", sans-serif;
-   letter-spacing: 1px;
-   font-weight: bold;
- }
 
- .navbar-light .navbar-nav .nav-link {
-   color: black;
 
-   &:hover {
-     color: rgb(95, 93, 93);
-   }
- }
+.navbar {
+  background-color: white;
+}
 
- .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-   color: #CC3363;
- }
-
- .event-dropdown {
+.me-auto.navbar-nav {
   font-family: "Nunito", sans-serif;
   letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
   color: black;
- 
- 
 
-   &:hover {
-     color: black;
-    background-color: #f3f3fb;
-   }
- }
+  &:hover {
+    color: rgb(95, 93, 93);
+  }
+}
 
- a.nav-link.event-dropdown-active {
-  color: #CC3363;
- 
- }
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgb(204, 51, 99);
+}
 
- 
- 
+.dropdown-menu {
+  border: none;
+}
+
+.event-dropdown {
+  font-family: "Nunito", sans-serif;
+  color: black;
+  font-size: 0.75em;
+}
+
+a.nav-link.event-dropdown-active {
+  color: rgb(204, 51, 99);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(204,51,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+.custom-toggler.navbar-toggler {
+  border-color: $myButtoncolor;
+  outline: none;
+}
+
+@media only screen and (min-width: 568px) {
+  .event-dropdown {
+    font-size: 1em;
+    &:hover {
+      background-color: $hoverColor;
+      color: white;
+    }
+  }
+
+  .dropdown-menu {
+    border: 1px solid lightgrey;
+    min-width: 450px;
+  }
+}
