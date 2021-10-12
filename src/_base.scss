@@ -14,6 +14,8 @@ $myButtoncolor:#CC3363;
 $myFloatColor: rgba(255, 255, 255, 1);
 $myFloatColorRed: rgba(72, 3, 85, 0.7);
 $mySecondaryColor: #ddcfe6;
+$gradientColor:linear-gradient(220deg, #CC3363, #9448BC);
+$hoverColor: #9448BC;
 
 @mixin text-bg {
     background-color: $myFloatColor;

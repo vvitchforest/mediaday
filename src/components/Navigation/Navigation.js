@@ -8,84 +8,86 @@ import logo from "../../logo.svg";
 const Navigation = () => {
   const [eventData, setEventData] = useState();
 
-    const getEvents = async() =>{
-        try {
-          const options = {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          };
-            const response = await fetch('/data/events.json', options);
-            const responseJson = await response.json();
+  const getEvents = async () => {
+    try {
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const response = await fetch("/data/events.json", options);
+      const responseJson = await response.json();
 
-            setEventData(responseJson);
+      setEventData(responseJson);
+    } catch (err) {
+      console.log("error, no json", err);
+    }
+  };
 
-        } catch (err) {
-            console.log('error, no json', err);
-        }
-    };
-
-    useEffect(() => {
-        getEvents();
-    }, [])
+  useEffect(() => {
+    getEvents();
+  }, []);
 
   return (
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        className="px-5 border-bottom"
-        fixed="top"
-      >
-        <Navbar.Brand as={Link} to="/">
-          <img
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <NavbarCollapse>
-          <Nav defaultActiveKey="/home" className="me-auto">
-            <Nav.Item>
-              <Nav.Link exact activeClassName="active" as={NavLink} to="/">
-                MediaDay
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link exact activeClassName="active" as={NavLink} to="/about">
-                Meistä
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
-                exact
-                activeClassName="active"
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className="px-5 border-bottom"
+      fixed="top"
+    >
+      <Navbar.Brand as={Link} to="/">
+        <img
+          src={logo}
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+          alt="React Bootstrap logo"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        className="custom-toggler"
+      />
+      <NavbarCollapse>
+        <Nav defaultActiveKey="/home" className="me-auto">
+          <Nav.Item>
+            <Nav.Link exact activeClassName="active" as={NavLink} to="/">
+              MediaDay
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link exact activeClassName="active" as={NavLink} to="/about">
+              Meistä
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link
+              exact
+              activeClassName="active"
+              as={NavLink}
+              to="/schedule"
+            >
+              Aikataulu
+            </Nav.Link>
+          </Nav.Item>
+          <NavDropdown title="Tapahtumat">
+            {eventData?.events.map(({ videoUrl, title }) => (
+              <NavDropdown.Item
+                key={title}
                 as={NavLink}
-                to="/schedule"
+                to={`/event/${videoUrl}`}
+                className="event-dropdown mb-3 px-0 px-sm-4 text-wrap"
+                activeClassName="event-dropdown-active"
               >
-                Aikataulu
-              </Nav.Link>
-            </Nav.Item>
-            <NavDropdown title="Tapahtumat">
-              {eventData?.events.map(({ videoUrl, title }) => (
-                <NavDropdown.Item
-                  key={title}
-                  as={NavLink}
-                  to={`/event/${videoUrl}`}
-                  className="event-dropdown mb-3"
-                  activeClassName="event-dropdown-active"
-                >
-                  {title}
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-        </NavbarCollapse>
-      </Navbar>
-  )
+                {title}
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
+        </Nav>
+      </NavbarCollapse>
+    </Navbar>
+  );
 };
 
 export default Navigation;
