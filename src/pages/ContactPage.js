@@ -1,10 +1,12 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm/ContactForm';
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const ContactPage = () => (
-<Container className="pt-5 mt-5 full-height">
+<Container className="mt-5 full-height">
+    <Row xs="auto" className="justify-content-center">
     <ContactForm />
+    </Row>
 </Container>
 );
 

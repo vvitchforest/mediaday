@@ -1,5 +1,30 @@
 @import "../../base";
 
-.my-container {
-   
+.my-contact-form {
+   width: 90vh;
+}
+
+.my-heading {
+    color: $myPurpleColor;
+}
+
+.btn-purple-form {
+    @include my-shadow;
+    background-color: $myButtoncolor;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: calc(5px + 2vmin);
+}
+
+.btn-purple-form:hover {
+    color: white;
+    background-color: #6aa0fc;
+  }
+
+label {
+    font-weight: 700;
+}
+
+Form {
+    font-family: 'Nunito Sans', sans-serif;
 }
