@@ -6,7 +6,7 @@ import "../components/Calendar/calendar.scss";
 
 const SchedulePage = () => {
   return (
-    <Container className="massive-margin text-center">
+    <Container className="massive-margin text-center mb-5">
       <h1 className="d-none d-sm-block main-heading-style">
         MediaDay aikataulu
       </h1>
