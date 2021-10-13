@@ -12,7 +12,7 @@ const Footer = () => {
                 <Row className="d-flex justify-content-center pb-1 pt-1 footer-text">
                     © 2021 METROPOLIA AMMATTIKORKEAKOULU. ALL RIGHTS RESERVED.
                 </Row>
-                <Row xs="auto" className="d-flex justify-content-center pt-1 pb-1">
+                <Row xs="auto" className="d-flex justify-content-center pt-1 pb-1 icon-links">
                         <Link as={Link} to="/about" className="footer-links">
                             MEISTÄ
                         </Link>

@@ -5,6 +5,10 @@
     font-size: 8vh;
 }
 
+.bi-arrow-up-square-fill:hover {
+    color: $myLinkHoverColor;
+}
+
 #up-arrow {
     position: fixed;
     bottom: 0px;
@@ -12,6 +16,7 @@
     padding: 0.5vh 2vh;
     z-index: 1;
 }
+
 
 .up-arrow-sticky {
     position: -webkit-sticky;

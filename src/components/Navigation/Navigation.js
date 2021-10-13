@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../logo.svg";
 import EventFetch from "../../EventFetch";
 
+
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
   const [show, setShow] = useState(false);
@@ -26,7 +27,7 @@ const Navigation = () => {
           width="30"
           height="30"
           className="d-inline-block align-top"
-          alt="React Bootstrap logo"
+          alt="Media Day logo"
         />
       </Navbar.Brand>
       <Navbar.Toggle

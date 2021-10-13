@@ -40,8 +40,9 @@ const Home = () => {
                             <Row xs="auto">
                                 <p className="slogan-txt">LET'S GET INSPIRED!</p>
                             </Row>
-                            <Row xs="auto">
-                                <p className="header-txt">Metropolia ammattikorkeakoulu</p>
+                            <Row xs="auto" >
+                                <p className="header-txt border-no">Metropolia</p>
+                                <p className="header-txt closer">ammattikorkeakoulu</p>
                             </Row>
                             <Row xs="auto">
                                 <p className="header-txt">Karaportti 2, Espoo</p>
@@ -104,7 +105,9 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
+                <Container className="d-flex">
                 <Sponsors />
+                </Container>
             </body>
         </>
     );

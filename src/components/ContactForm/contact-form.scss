@@ -28,3 +28,21 @@ label {
 Form {
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.main-heading-style {
+    color: $myPurpleColor;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: calc(1em + 2vw);
+  }
+
+
+.my-toast-base {
+    background-color: $myInfoColor;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+}
+
+.my-toast-border {
+    border-bottom: 2px solid $myPurpleColor;
+}

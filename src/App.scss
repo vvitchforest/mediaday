@@ -12,7 +12,7 @@
 }
 
 .img {
-  background: url("./images/bg1.jpg") no-repeat;
+  background: url("/images/bg1.jpg") no-repeat;
   display: flex;
   height: 100vh;
   min-height: 600px;
@@ -80,6 +80,35 @@
   margin-top: 8vw;
   margin-bottom: 8vw;
 }
+
+.closer {
+  margin-left: -0.8em;
+  padding-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.border-no {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media (max-width: 350px) {
+  .extra-margin-left {
+    margin-left: 0.3em;
+  }
+
+  .closer {
+    margin-left: 0.3em;
+    padding-left: 1em;
+    border-radius: 10px;
+  }
+  
+  .border-no {
+    border-radius: 10px;
+  }
+}
+
 
 
 
