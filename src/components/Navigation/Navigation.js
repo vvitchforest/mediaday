@@ -72,18 +72,6 @@ const Navigation = () => {
               activeClassName="active"
               className="text-decoration-none"
               as={NavLink}
-              to="/about"
-              onClick={() => setExpanded(false)}
-            >
-              Meistä
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              exact
-              activeClassName="active"
-              className="text-decoration-none"
-              as={NavLink}
               to="/schedule"
               onClick={() => setExpanded(false)}
             >

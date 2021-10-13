@@ -37,13 +37,8 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
 
   return (
     <>
-<<<<<<< HEAD
       <Row className="mb-5" ref={ref}>
-        <Col>
-=======
-      <Row className="mb-5">
         <Col md={12}>
->>>>>>> irina
           {ongoingEvent ? (
             <>
               <h2 className="heading-style">{ongoingEvent.title} </h2>
@@ -66,7 +61,7 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
             </>
           ) : (
             <>
-            <h2 className="main-heading-style text-center">MEDIADAY 23.3.2022</h2>
+            <h2 className="main-heading-style text-center pb-4">MEDIADAY 23.3.2022</h2>
             <Video url={eventPromoUrl} type={eventPromoType} />
             </>
           )}

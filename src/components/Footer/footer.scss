@@ -21,10 +21,13 @@
     padding: 0.5em 0.7em;
 }
 
+.icon-links {
+
   a:hover, .bi:hover {
     text-decoration: underline;
     color: $myLinkHoverColor;
   }
+}
 
   @media (max-width: 360px) {
     .footer-text{
