@@ -38,16 +38,6 @@
 }
 
 @media (max-width: 575.98px) {
-    .white {
-        @include logo-boxes;
-        background-color: white; 
-    }
-    
-    .black {
-        @include logo-boxes;
-        background-color: black; 
-    }
-
     .sponsor-heading {
         text-align: center;
         margin: 1em 0;
@@ -58,5 +48,17 @@
 @media (max-width: 280px) {
     .sponsor-heading {
         font-size: calc(0.7em + 2vw);
+    }
+
+    .white {
+        height: 8vh;
+    }
+    
+    .black {
+        height: 8vh;
+    }
+
+    .correct-size {
+        height: 10vh;
     }
 }

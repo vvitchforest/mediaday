@@ -34,33 +34,20 @@ svg path {
 
 @media (max-width: 575.98px) {
     .info-icons {
-        font-size: 2.2em;
-        margin-top: -0.42em;
+        font-size: 2.3em;
+        margin-top: -0.3em;
+        margin-bottom: -0.5em;
         margin-right: -0.05em;
+        justify-content: flex-end !important;
     }
 
-    .fixed-size {
-        margin: 0 -1em !important;
-    }
-}
-
-
-@media (max-width: 360px) {
-    .info-icons {
-        font-size: 1.7em;
-        margin-top: -0.44em;
-        margin-right: 0em;
-    }
-
-    .fixed-size {
-        margin: 0 -2.5em !important;
-    }
-
-    .p-3 {
-        padding-top: 0.5em !important;
-        padding-bottom: 0.5em !important;
+    .filled {
+        margin-left: -1vh !important;
+        margin-right: -1vh !important;
     }
 }
+
+
 
 
 

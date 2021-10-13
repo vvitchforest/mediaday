@@ -14,10 +14,10 @@ const ButtonUp = () => {
 
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 700){
+        if (scrolled > 900){
           setVisible(true)
         } 
-        else if (scrolled <= 700){
+        else if (scrolled <= 900){
           setVisible(false)
         }
       };

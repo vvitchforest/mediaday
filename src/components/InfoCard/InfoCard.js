@@ -9,8 +9,8 @@ const InfoCard = ({ number, title, text, icon }) => {
     document.title = "MediaDay"
 
     return (
-        <Card className="m-3 shadow p-3 mb-2 bg-light rounded fixed-size">
-            <Card.Body className="d-flex">
+        <Card className="m-sm-3 shadow p-sm-3 mb-2 bg-light rounded filled">
+            <Card.Body xs="auto" className="d-flex flex-column-reverse flex-sm-row">
                 <div className="p-3 w-100">
                     <Card.Subtitle className="mb-2 my-number">
                         {number}

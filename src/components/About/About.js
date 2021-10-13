@@ -2,7 +2,7 @@ import "./about.scss";
 import "../../styles.scss";
 
 import React from "react";
-import { Col, Container, Row, Image, Alert } from "react-bootstrap";
+import { Col, Container, Row} from "react-bootstrap";
 import EventFetch from "../../EventFetch";
 
 const About = () => {
