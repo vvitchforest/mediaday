@@ -6,11 +6,9 @@ import Video from "../Video/Video";
 import EventFetch from "../../EventFetch";
 import { BiBroadcast } from "react-icons/bi";
 
-// eslint-disable-next-line no-empty-pattern
 const StreamOnHomePage = forwardRef(({}, ref) => {
   const url = "/data/events.json";
   const eventResult = EventFetch(url);
-  console.log("event result mikä oot", eventResult);
 
   const isEventNow = (startTime, endTime, startDate) => {
     const [day, month, year] = startDate.split(".").map(Number);
@@ -38,7 +36,7 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
   return (
     <>
       <Row className="mb-5" ref={ref}>
-        <Col md={12}>
+        <Col>
           {ongoingEvent ? (
             <>
               <h2 className="heading-style">{ongoingEvent.title} </h2>

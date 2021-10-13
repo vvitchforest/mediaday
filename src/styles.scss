@@ -11,7 +11,7 @@
 
 .main-heading-style {
   color: $myPurpleColor;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: calc(1em + 2vw);
 }
@@ -25,9 +25,8 @@
 }
 
 .text-style {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: calc(10px + 1vmin);
-
 }
 
 .subheading-style {
@@ -36,7 +35,6 @@
   letter-spacing: 1px;
   font-size: calc(10px + 1.25vmin);
   font-weight: 700;
-
 }
 
 .custom-badge-container {
@@ -57,33 +55,6 @@
 .custom-badge > svg {
   display: none;
 }
-
-
-.back-button {
-  background-color: #cc3363;
-  color: white;
-  border: none;
-
-  &:hover {
-    background-color: #94284a;
-    color: white;
-    border: none;
-  }
-
-  &:active {
-    background-color: #cc3363;
-    border: none;
-    color: white;
-  }
-
-  &:focus {
-    background-color: #cc3363;
-    border: none;
-    color: white;
-  }
-}
-
-
 
 .navbar {
   background-color: white;
@@ -110,7 +81,6 @@
 
 .dropdown-menu {
   border: none;
-  
 }
 
 .event-dropdown {
@@ -132,7 +102,6 @@ a.nav-link.event-dropdown-active {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(204,51,99, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-
 .custom-toggler.navbar-toggler {
   border-color: $myButtoncolor;
   outline: none;
@@ -141,7 +110,6 @@ a.nav-link.event-dropdown-active {
 @media only screen and (min-width: 568px) {
   .event-dropdown {
     font-size: 1em;
-   
   }
 
   .dropdown-menu {
@@ -149,14 +117,14 @@ a.nav-link.event-dropdown-active {
     min-width: 450px;
   }
 
-  .custom-badge-container, .custom-badge {
+  .custom-badge-container,
+  .custom-badge {
     display: inline-block;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
-  .custom-badge > svg{
+  .custom-badge > svg {
     display: inline-block;
   }
 }

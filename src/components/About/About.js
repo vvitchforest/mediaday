@@ -6,7 +6,7 @@ import { Col, Container, Row, Image, Alert } from "react-bootstrap";
 import EventFetch from "../../EventFetch";
 
 const About = () => {
-  document.title = "hello from about";
+  document.title = "Meistä";
   const url = "/data/events.json";
   const eventData = EventFetch(url);
   console.log("event data about mikä oot", eventData);

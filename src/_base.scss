@@ -19,6 +19,7 @@ $myLinkHoverColor: rgb(106, 160, 252);
 $gradientColor:linear-gradient(220deg, #CC3363, #9448BC);
 $hoverColor: #9448BC;
 $myInfoColor: rgba(106, 162, 252, 0.8);
+$bg-color: #f3f3fb;
 
 @mixin text-bg {
     background-color: $myFloatColor;

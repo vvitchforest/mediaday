@@ -6,9 +6,10 @@ import "./calendar.scss";
 import EventFetch from "../../EventFetch";
 
 const Calendar = () => {
+  document.title = "Aikataulu";
 
   const url = "/data/events.json";
-  const eventData = EventFetch(url)
+  const eventData = EventFetch(url);
 
   const onMouseEnter = (target) => {
     target.event.setProp("backgroundColor", "rgb(106, 160, 252)");
@@ -24,9 +25,7 @@ const Calendar = () => {
     return (
       <div className="test">
         <p>
-          <span className="my-event-title">
-            {eventInfo.event.title}
-          </span>
+          <span className="my-event-title">{eventInfo.event.title}</span>
           <br></br>
           <span className="my-event-speaker">
             {eventInfo.event.extendedProps.speaker},{" "}
@@ -46,7 +45,6 @@ const Calendar = () => {
               hour12: false,
             })}
           </span>
-         
         </p>
       </div>
     );
@@ -61,7 +59,7 @@ const Calendar = () => {
         slotMinTime="10:00:00"
         slotMaxTime="18:00:00"
         nowIndicator={true}
-        headerToolbar={false} 
+        headerToolbar={false}
         height={850}
         eventBackgroundColor="rgba(106, 162, 252, 0.8)"
         eventBorderColor="rgb(106, 160, 252)"
@@ -74,21 +72,21 @@ const Calendar = () => {
           hour: "numeric",
           minute: "2-digit",
           hour12: false,
-          className: 'time-label'
+          className: "time-label",
         }}
         eventTimeFormat={{
           hour: "numeric",
           minute: "2-digit",
           hour12: false,
         }}
-        
-       
         eventMouseEnter={onMouseEnter}
         eventMouseLeave={onMouseLeave}
         eventContent={renderEventContent}
         events={eventData?.events.map((data) => {
           const [day, month, year] = data.startDate.split(".").map(Number);
-          const [startHour, startMinute] = data.startTime.split(":").map(Number);
+          const [startHour, startMinute] = data.startTime
+            .split(":")
+            .map(Number);
           const [endHour, endMinute] = data.endTime.split(":").map(Number);
 
           return {
@@ -100,7 +98,6 @@ const Calendar = () => {
             speaker: data.speaker.name,
             company: data.speaker.company,
             className: "my-event",
-            
           };
         })}
       />

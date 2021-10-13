@@ -7,6 +7,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 
 const ContactForm = () => {
+    document.title = "Ota yhteyttä";
     const [toSend, setToSend] = useState({
         from_name: '',
         to_name: '',

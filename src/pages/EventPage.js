@@ -1,42 +1,17 @@
-import React, { useState, useEffect } from "react";
 import "./event.scss";
 import "../styles.scss";
 import { Col, Container, Row, Image, Alert } from "react-bootstrap";
 import { useParams } from "react-router";
 import Video from "../components/Video/Video";
 import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
-
-//import eventData from "../data/events.json";
+import EventFetch from "../EventFetch";
 
 const EventPage = () => {
-  document.title = "Tapahtumat";
   const { id } = useParams();
-  const [eventData, setEventData] = useState();
-
-  const getEvents = async () => {
-    try {
-      const options = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-      const response = await fetch("/data/events.json", options);
-      const responseJson = await response.json();
-
-      setEventData(responseJson);
-    } catch (err) {
-      console.log("error, no json", err);
-    }
-  };
-
-  useEffect(() => {
-    getEvents();
-  }, []);
+  const url = "/data/events.json";
+  const eventData = EventFetch(url);
 
   const eventResult = eventData?.events.find(({ videoUrl }) => videoUrl === id);
-  console.log("event result", eventResult);
-
   const eventPromoUrl = eventData?.promoVideo.promoVideoUrl;
   const eventPromoType = eventData?.promoVideo.promoVideoType;
 
@@ -46,11 +21,8 @@ const EventPage = () => {
 
   return (
     <>
-      <Container fluid="md" className="event-container">
+      <Container fluid="md" className=" massive-margin event-container">
         <Row>
-          <Col className="mt-5"></Col>
-        </Row>
-        <Row className="mt-5">
           <Col className="d-flex flex-column align-items-center mb-0">
             {eventResult.speaker.image ? (
               <div className="gradient-border">
@@ -66,8 +38,12 @@ const EventPage = () => {
             ) : (
               <div className="pt-5"></div>
             )}
-            <p className="text-style mt-2 mb-0 fw-bold">{eventResult.speaker.name}</p>
-            <p className="text-style fst-italic">{eventResult.speaker.company}</p>
+            <p className="text-style mt-2 mb-0 fw-bold">
+              {eventResult.speaker.name}
+            </p>
+            <p className="text-style fst-italic">
+              {eventResult.speaker.company}
+            </p>
           </Col>
           <Col lg={9} className="event-info">
             <h1 className="my-2 heading-style">{eventResult.title}</h1>
@@ -75,7 +51,9 @@ const EventPage = () => {
               {eventResult.startDate} klo. {eventResult.startTime}-
               {eventResult.endTime}
             </p>
-            <p className="text-style pt-sm-2 fw-light">{eventResult?.description}</p>
+            <p className="text-style pt-sm-2 fw-light">
+              {eventResult?.description}
+            </p>
           </Col>
         </Row>
         <Row className="mb-5">
@@ -106,10 +84,7 @@ const EventPage = () => {
                         </Alert>
                       </Col>
                       <Col>
-                        <Video
-                          url={eventPromoUrl}
-                          type={eventPromoType}
-                        />
+                        <Video url={eventPromoUrl} type={eventPromoType} />
                       </Col>
                     </Row>
                   )}

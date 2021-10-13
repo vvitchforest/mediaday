@@ -3,32 +3,14 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../logo.svg";
-//import eventData from "../../data/events.json";
+import EventFetch from "../../EventFetch";
 
 const Navigation = () => {
-  const [eventData, setEventData] = useState();
   const [expanded, setExpanded] = useState(false);
+  const [show, setShow] = useState(false);
 
-  const getEvents = async () => {
-    try {
-      const options = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-      const response = await fetch("/data/events.json", options);
-      const responseJson = await response.json();
-
-      setEventData(responseJson);
-    } catch (err) {
-      console.log("error, no json", err);
-    }
-  };
-
-  useEffect(() => {
-    getEvents();
-  }, []);
+  const url = "/data/events.json";
+  const eventData = EventFetch(url);
 
   return (
     <Navbar
@@ -78,7 +60,13 @@ const Navigation = () => {
               Aikataulu
             </Nav.Link>
           </Nav.Item>
-          <NavDropdown title="Tapahtumat" className="text-decoration-none">
+          <NavDropdown
+            title="Tapahtumat"
+            className="text-decoration-none"
+            show={show}
+            onMouseEnter={() => setShow(true)}
+            onMouseLeave={() => setShow(false)}
+          >
             {eventData?.events.map(({ videoUrl, title }) => (
               <NavDropdown.Item
                 key={title}

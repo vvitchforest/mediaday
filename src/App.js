@@ -9,16 +9,31 @@ import Home from "./pages/Home";
 import SchedulePage from "./pages/SchedulePage";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import EventFetch from "./EventFetch";
 
 function App() {
   const location = useLocation();
+  const url = "/data/events.json";
+  const eventData = EventFetch(url);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    if (eventData) {
+      const locationData = location.pathname.split("/").reverse();
+      const [eventUrl, path] = locationData;
 
+      if (path === "event") {
+        const found = eventData.events.find(
+          ({ videoUrl }) => videoUrl === eventUrl
+        );
+        document.title = found?.title;
+      }
+    }
+  });
 
   return (
     <div className="App">
@@ -33,18 +48,16 @@ function App() {
           <ContactPage />
         </Route>
         <Route path="/about">
-          <AboutPage/>
+          <AboutPage />
         </Route>
         <Route path="/schedule">
           <SchedulePage />
         </Route>
         <Route path="/event/:id" children={<EventPage />} />
-        <Route path="/" exact component={Home} >
-        </Route>
+        <Route path="/" exact component={Home}></Route>
       </Switch>
 
       <Footer />
-
     </div>
   );
 }
