@@ -1,29 +1,12 @@
-
-
 import React, { useEffect, useRef } from "react";
-
 import videojs from "video.js";
-
 import "video.js/dist/video-js.css";
 import "./video.scss";
+import 'videojs-errors';
 
 const Video = ({ url, type }) => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
-
-  const options = {
-    // lookup the options in the docs for more options
-    autoplay: false,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [
-      {
-        src: url,
-        type,
-      },
-    ],
-  };
 
   const onReady = (player) => {
     playerRef.current = player;
@@ -40,6 +23,19 @@ const Video = ({ url, type }) => {
   };
 
   useEffect(() => {
+    const options = {
+      // lookup the options in the docs for more options
+      autoplay: false,
+      controls: true,
+      responsive: true,
+      fluid: true,
+      sources: [
+        {
+          src: url,
+          type,
+        },
+      ],
+    } ;
     let player;
     
 
@@ -63,7 +59,7 @@ const Video = ({ url, type }) => {
 
     player.addClass('vjs-my-video-player');
 
-  }, [options]);
+  });
 
   // Dispose the Video.js player when the functional component unmounts
   useEffect(() => {

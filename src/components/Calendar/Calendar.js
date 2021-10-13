@@ -11,12 +11,12 @@ const Calendar = () => {
   const eventData = EventFetch(url)
 
   const onMouseEnter = (target) => {
-    target.event.setProp("backgroundColor", "#8986ba");
+    target.event.setProp("backgroundColor", "rgb(106, 160, 252)");
     target.event.setProp("textColor", "white");
   };
 
   const onMouseLeave = (target) => {
-    target.event.setProp("backgroundColor", "rgba(194,183,218, 0.9)");
+    target.event.setProp("backgroundColor", "rgba(106, 162, 252, 0.8)");
     target.event.setProp("textColor", "black");
   };
 
@@ -57,14 +57,14 @@ const Calendar = () => {
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
-        initialDate="2021-10-12"
+        initialDate="2021-10-13"
         slotMinTime="10:00:00"
         slotMaxTime="18:00:00"
         nowIndicator={true}
         headerToolbar={false} 
         height={850}
-        eventBackgroundColor="rgba(194,183,218, 0.9)"
-        eventBorderColor="#c2b7da"
+        eventBackgroundColor="rgba(106, 162, 252, 0.8)"
+        eventBorderColor="rgb(106, 160, 252)"
         eventTextColor="black"
         allDaySlot={false}
         dayHeaders={false}
@@ -100,6 +100,7 @@ const Calendar = () => {
             speaker: data.speaker.name,
             company: data.speaker.company,
             className: "my-event",
+            
           };
         })}
       />

@@ -24,6 +24,7 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "video.js": "^7.15.4",
+    "videojs-errors": "^4.5.0",
     "videojs-landscape-fullscreen": "^11.33.0",
     "videojs-overlay": "^2.1.5",
     "web-vitals": "^1.1.2"

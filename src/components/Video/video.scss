@@ -1,3 +1,5 @@
+@import '../../base';
+
 /* Change all text and icon colors in the player. */
 .vjs-my-video-player.video-js {
     color: white;
@@ -48,10 +50,10 @@
     box-sizing: border-box;
     background: #000;
     border-radius: 50%;
-    background: linear-gradient(45deg, rgba(118, 153, 212, 0.6), rgba(149, 73, 190, 0.6));
+    background: linear-gradient(220deg, rgba(204, 51, 99, 0.6), rgba(148, 72, 188, 0.6));
     border: transparent;
-    width: 1.75em;
-    height: 1.75em;
+    width: 1.5em;
+    height: 1.5em;
 
     & .vjs-icon-placeholder::before {
         display: flex;
@@ -62,8 +64,9 @@
 
 .vjs-my-video-player .vjs-play-progress,
 .vjs-my-video-player .vjs-volume-level {
-    background: linear-gradient(45deg, #7699d4, #9448bc);
+    background: linear-gradient(220deg, rgb(204, 51, 99), rgb(148, 72, 188));
 }
+
 
 /* Change the color of various "bars". */
 
@@ -77,7 +80,7 @@
     background-color: rgba(0, 0, 0, 0.781);
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
     .vjs-my-video-player.video-js {
         font-size: 1.25em;
     }
