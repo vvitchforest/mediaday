@@ -1,7 +1,7 @@
 import "./App.scss";
 import "./styles.scss";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import EventPage from "./pages/EventPage";
 import ContactPage from "./pages/ContactPage";
@@ -9,9 +9,16 @@ import Home from "./pages/Home";
 import SchedulePage from "./pages/SchedulePage";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
-
+import { useEffect } from 'react';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+
 
   return (
     <div className="App">

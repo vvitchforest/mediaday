@@ -1,0 +1,18 @@
+@import '../../base';
+
+.first-col, .last-col {
+    color: white;
+}
+
+.first-col {
+    border-radius: 50px 0 0 0;
+    background:linear-gradient(220deg,  rgba(204, 51, 99, 0.8),  rgba(148, 72, 188, 0.9));
+    
+}
+
+.last-col {
+    border-radius: 0 0 50px 0;
+    background:linear-gradient(220deg,  rgba(204, 51, 99, 0.8),  rgba(148, 72, 188, 0.9));
+
+
+}

@@ -9,6 +9,7 @@ import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
 //import eventData from "../data/events.json";
 
 const EventPage = () => {
+  document.title = "Tapahtumat";
   const { id } = useParams();
   const [eventData, setEventData] = useState();
 
@@ -36,6 +37,9 @@ const EventPage = () => {
   const eventResult = eventData?.events.find(({ videoUrl }) => videoUrl === id);
   console.log("event result", eventResult);
 
+  const eventPromoUrl = eventData?.promoVideo.promoVideoUrl;
+  const eventPromoType = eventData?.promoVideo.promoVideoType;
+
   if (!eventResult) {
     return <div>Event {id} was not found :(</div>;
   }
@@ -47,7 +51,7 @@ const EventPage = () => {
           <Col className="mt-5"></Col>
         </Row>
         <Row className="mt-5">
-          <Col className="d-flex flex-column align-items-center mb-3">
+          <Col className="d-flex flex-column align-items-center mb-0">
             {eventResult.speaker.image ? (
               <div className="gradient-border">
                 <Image
@@ -62,12 +66,16 @@ const EventPage = () => {
             ) : (
               <div className="pt-5"></div>
             )}
-            <p className="mt-2 mb-0 fw-bold fs-5">{eventResult.speaker.name}</p>
-            <p className="fst-italic fs-5">{eventResult.speaker.company}</p>
+            <p className="text-style mt-2 mb-0 fw-bold">{eventResult.speaker.name}</p>
+            <p className="text-style fst-italic">{eventResult.speaker.company}</p>
           </Col>
           <Col lg={9} className="event-info">
-            <h1 className="my-2 fs-1 text-wrap">{eventResult.title}</h1>
-            <p className="fs-4 fw-light">{eventResult?.description}</p>
+            <h1 className="my-2 heading-style">{eventResult.title}</h1>
+            <p className="text-style fw-bold">
+              {eventResult.startDate} klo. {eventResult.startTime}-
+              {eventResult.endTime}
+            </p>
+            <p className="text-style pt-sm-2 fw-light">{eventResult?.description}</p>
           </Col>
         </Row>
         <Row className="mb-5">
@@ -80,44 +88,46 @@ const EventPage = () => {
               {(streamHasStarted, streamHasEnded) => (
                 <>
                   {streamHasStarted && !streamHasEnded && (
-                    <Video
-                      url={eventResult.streamUrl}
-                      type={eventResult.streamVideoType}
-                    />
+                    <Row>
+                      <Col>
+                        <Video
+                          url={eventResult.streamUrl}
+                          type={eventResult.streamVideoType}
+                        />
+                      </Col>
+                    </Row>
                   )}
                   {!streamHasStarted && (
-                    <>
-                      <Video
-                        url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Wikipedia_Edit_2014.webm"
-                        type="video/webm"
-                      />
-                      <Row className="justify-content-center">
-                        <Col>
-                          <Alert className="blue-overlay mt-3 shadow p-3 mb-5 rounded">
-                            Striimi alkaa {eventResult.startDate} klo.
-                            {eventResult.startTime} , tässä promo video
-                            (placeholder)
-                          </Alert>
-                        </Col>
-                      </Row>
-                    </>
+                    <Row className="d-flex flex-column">
+                      <Col lg={4} className="align-self-center">
+                        <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
+                          Striimi alkaa {eventResult.startDate} klo.{" "}
+                          {eventResult.startTime}
+                        </Alert>
+                      </Col>
+                      <Col>
+                        <Video
+                          url={eventPromoUrl}
+                          type={eventPromoType}
+                        />
+                      </Col>
+                    </Row>
                   )}
                   {streamHasEnded && (
-                    <>
-                      <Video
-                        url={eventResult.archiveVideoUrl}
-                        type={eventResult.archiveVideoType}
-                      />
-                      <Row className="justify-content-center">
-                        <Col>
-                          <Alert className="blue-overlay mt-5 shadow p-3 mb-5 rounded fs-5 fw-normal">
-                            Striimi tapahtumasta {eventResult.title} on
-                            päättynyt {eventResult.startDate} klo{" "}
-                            {eventResult.endTime}, tässä tallenne (placeholder)
-                          </Alert>
-                        </Col>
-                      </Row>
-                    </>
+                    <Row className="d-flex flex-column">
+                      <Col lg={8} className="align-self-center">
+                        <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
+                          Videotallenne striimistä{" "}
+                          <span className="fw-bold">{eventResult.title} </span>
+                        </Alert>
+                      </Col>
+                      <Col>
+                        <Video
+                          url={eventResult.archiveVideoUrl}
+                          type={eventResult.archiveVideoType}
+                        />
+                      </Col>
+                    </Row>
                   )}
                 </>
               )}

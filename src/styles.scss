@@ -5,32 +5,58 @@
   @include text-bg;
 }
 
-.main-video-title-container > h2 {
+.massive-margin {
+  margin-top: 5em;
+}
+
+.main-heading-style {
+  color: $myPurpleColor;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: calc(1em + 2vw);
+}
+
+.heading-style {
   font-family: "Open Sans Condensed", sans-serif;
-  color: $myButtoncolor;
-  letter-spacing: 2px;
+  color: $myPurpleColor;
+  letter-spacing: 1px;
   font-size: calc(10px + 2vmin);
   font-weight: 700;
 }
 
+.text-style {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: calc(10px + 1vmin);
+
+}
+
+.subheading-style {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: black;
+  letter-spacing: 1px;
+  font-size: calc(10px + 1.25vmin);
+  font-weight: 700;
+
+}
+
 .custom-badge-container {
   background: $gradientColor;
+  width: 12vmin;
+  display: none;
 }
 
 .custom-badge {
-  background-color: white;
-  color: black;
-  font-size: 0.5em;
-  letter-spacing: 1px;
-}
-
-.ongoing-event-date,
-.ongoing-event-time {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1.25em;
-  font-weight: 700;
+  background-color: #f3f3fb;
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  display: none;
 }
 
+.custom-badge > svg {
+  display: none;
+}
 
 
 .back-button {
@@ -84,12 +110,18 @@
 
 .dropdown-menu {
   border: none;
+  
 }
 
 .event-dropdown {
   font-family: "Nunito", sans-serif;
   color: black;
   font-size: 0.75em;
+
+  &:hover {
+    background-color: $myLinkHoverColor;
+    color: white;
+  }
 }
 
 a.nav-link.event-dropdown-active {
@@ -109,14 +141,22 @@ a.nav-link.event-dropdown-active {
 @media only screen and (min-width: 568px) {
   .event-dropdown {
     font-size: 1em;
-    &:hover {
-      background-color: $hoverColor;
-      color: white;
-    }
+   
   }
 
   .dropdown-menu {
     border: 1px solid lightgrey;
     min-width: 450px;
+  }
+
+  .custom-badge-container, .custom-badge {
+    display: inline-block;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-badge > svg{
+    display: inline-block;
   }
 }

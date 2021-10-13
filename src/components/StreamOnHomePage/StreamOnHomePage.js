@@ -32,38 +32,43 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
       isEventNow(startTime, endTime, startDate)
   );
 
-  const eventPromoUrl = eventResult?.events[0].promoVideoUrl;
-  const eventPromoType = eventResult?.events[0].promoVideoType;
+  const eventPromoUrl = eventResult?.promoVideo.promoVideoUrl;
+  const eventPromoType = eventResult?.promoVideo.promoVideoType;
 
   return (
     <>
+<<<<<<< HEAD
       <Row className="mb-5" ref={ref}>
         <Col>
+=======
+      <Row className="mb-5">
+        <Col md={12}>
+>>>>>>> irina
           {ongoingEvent ? (
             <>
-              <div className="p-3 mb-2 main-video-title-container">
-                <h2 className=" d-flex justify-content-between">
-                  {ongoingEvent.title}{" "}
-                  <span className="custom-badge-container d-flex justify-content-center rounded">
-                    <span className="custom-badge m-1 p-2">
-                      Live now <BiBroadcast />
-                    </span>
-                  </span>
-                </h2>
-                <span className="ongoing-event-date">
-                  {ongoingEvent.startDate}{" "}
-                </span>
-                <span className="ongoing-event-time">
-                  {ongoingEvent.startTime}-{ongoingEvent.endTime}
-                </span>
+              <h2 className="heading-style">{ongoingEvent.title} </h2>
+              <span className="subheading-style">
+                {ongoingEvent.startDate}{" "}
+              </span>
+              <span className="subheading-style">
+                {ongoingEvent.startTime}-{ongoingEvent.endTime}
+              </span>
+              <div className="custom-badge-container d-flex justify-content-center rounded my-2">
+                <div className="custom-badge text-center m-1 p-1">
+                  Live <BiBroadcast />
+                </div>
               </div>
+
               <Video
                 url={ongoingEvent.streamUrl}
                 type={ongoingEvent.streamVideoType}
               />
             </>
           ) : (
+            <>
+            <h2 className="main-heading-style text-center">MEDIADAY 23.3.2022</h2>
             <Video url={eventPromoUrl} type={eventPromoType} />
+            </>
           )}
         </Col>
       </Row>
