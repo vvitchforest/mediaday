@@ -26,7 +26,7 @@ const ButtonUp = () => {
 
     return (
         <div id="up-arrow">
-            <Link to={location} alt="arrow up" style={{display: visible ? 'inline' : 'none'}}><i class="bi bi-arrow-up-square-fill"></i></Link>
+            <Link to={location} alt="arrow up" style={{display: visible ? 'inline' : 'none'}}><i className="bi bi-arrow-up-square-fill"></i></Link>
         </div>
     );
 };
