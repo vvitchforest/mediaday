@@ -6,6 +6,7 @@ import Video from "../Video/Video";
 import EventFetch from "../../EventFetch";
 import { BiBroadcast } from "react-icons/bi";
 
+// eslint-disable-next-line no-empty-pattern
 const StreamOnHomePage = forwardRef(({}, ref) => {
   const url = "/data/events.json";
   const eventResult = EventFetch(url);

@@ -43,7 +43,7 @@ const CountDown = () => {
         }
 
         return (
-            <Container className="space justify-content-center">
+            <Container className="space justify-content-center" key={interval}>
                 <Row className="font-weight justify-content-center">
                     {timeLeft[interval]}
                 </Row>

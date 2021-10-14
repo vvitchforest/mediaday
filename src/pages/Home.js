@@ -64,7 +64,7 @@ const Home = () => {
                     </Container>
                 </div>
             </header>
-            <body>
+            <div>
                 <Container className="my-stream">
                     <StreamOnHomePage ref={toStreamRef}/>
                 </Container>
@@ -108,7 +108,7 @@ const Home = () => {
                 <Container className="d-flex">
                 <Sponsors />
                 </Container>
-            </body>
+            </div>
         </>
     );
 };

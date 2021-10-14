@@ -43,9 +43,8 @@ const Sponsors = () => {
             myClass = "black";
         }
 
-        console.log("sponsor result", sponsorImage);
         return (
-            <Col className="d-flex align-self-center justify-content-center">
+            <Col className="d-flex align-self-center justify-content-center" key={sponsorImages.name}>
                 <div className="correct-size">
                     <Image
                         src={sponsorImage}

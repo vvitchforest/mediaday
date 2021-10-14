@@ -21,9 +21,9 @@ const Footer = () => {
                         </Link>
                 </Row>
                 <Row xs="auto" className="d-flex justify-content-center pt-1 pb-1 icon-links">
-                <a href="https://facebook.com" alt="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com" alt="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="https://instagram.com" alt="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://facebook.com" alt="facebook"><i className="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" alt="twitter"><i className="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" alt="instagram"><i className="bi bi-instagram"></i></a>
                </Row>
             </Container>
 
