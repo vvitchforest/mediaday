@@ -29,7 +29,7 @@ const Home = () => {
                 <div className="img">
                     <Container>
                         <div className="extra-margin-left">
-                            <Slide triggerOnce={true}>
+                            <Slide cascade triggerOnce={true}>
                                 <Row xs="auto">
                                     <h1 className="display-2 mediaday">MEDIADAY</h1>
                                 </Row>
@@ -80,7 +80,7 @@ const Home = () => {
                 <ButtonUp />
                 <Container>
                     <Row xs={1} md={1} lg={2} className="g-4">
-                        <Fade cascade triggerOnce>
+                        <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="01"
@@ -89,6 +89,8 @@ const Home = () => {
                                     icon={<BiMoviePlay />}
                                 />
                             </Col>
+                            </Fade>
+                            <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="02"
@@ -97,6 +99,8 @@ const Home = () => {
                                     icon={<ImBubbles3 />}
                                 />
                             </Col>
+                            </Fade>
+                            <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="03"
@@ -105,6 +109,8 @@ const Home = () => {
                                     icon={<BiLink />}
                                 />
                             </Col>
+                            </Fade>
+                            <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="04"
