@@ -4,6 +4,11 @@ import "video.js/dist/video-js.css";
 import "./video.scss";
 import 'videojs-errors';
 
+/**
+ * Renders <Video /> component
+ * 
+ */
+
 const Video = ({ url, type }) => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
@@ -11,8 +16,6 @@ const Video = ({ url, type }) => {
   const onReady = (player) => {
     playerRef.current = player;
     
-
-    // you can handle player events here
     player.on("waiting", () => {
       console.log("player is waiting");
     });
@@ -24,7 +27,6 @@ const Video = ({ url, type }) => {
 
   useEffect(() => {
     const options = {
-      // lookup the options in the docs for more options
       autoplay: false,
       controls: true,
       responsive: true,

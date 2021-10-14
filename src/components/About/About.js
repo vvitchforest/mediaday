@@ -5,6 +5,12 @@ import React from "react";
 import { Col, Container, Row} from "react-bootstrap";
 import EventFetch from "../../EventFetch";
 
+
+/**
+ * Renders <About /> component
+ * 
+ */
+
 const About = () => {
   document.title = "Meistä";
   const url = "/data/events.json";

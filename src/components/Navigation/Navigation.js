@@ -6,6 +6,10 @@ import logo from "../../m.svg";
 import EventFetch from "../../EventFetch";
 
 
+/**
+ * Renders <Navigation /> component
+ */
+
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
   const [show, setShow] = useState(false);

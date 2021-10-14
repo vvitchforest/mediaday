@@ -4,6 +4,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import Calendar from "../components/Calendar/Calendar";
 import "../components/Calendar/calendar.scss";
 
+
+/**
+ * A component for displaying calendar
+ */
 const SchedulePage = () => {
   return (
     <Container className="massive-margin text-center mb-5">

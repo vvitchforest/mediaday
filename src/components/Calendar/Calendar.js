@@ -5,21 +5,31 @@ import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClic
 import "./calendar.scss";
 import EventFetch from "../../EventFetch";
 
+/**
+ * Renders a <Calendar /> component
+ */
+
 const Calendar = () => {
   document.title = "Aikataulu";
-
   const url = "/data/events.json";
   const eventData = EventFetch(url);
 
   const onMouseEnter = (target) => {
     target.event.setProp("backgroundColor", "rgb(106, 160, 252)");
     target.event.setProp("textColor", "white");
+    console.log("target", target);
   };
 
   const onMouseLeave = (target) => {
     target.event.setProp("backgroundColor", "rgba(106, 162, 252, 0.8)");
     target.event.setProp("textColor", "black");
   };
+
+  /**
+   * A function for rendering event data, called in Full Calendar's eventContent
+   * @param {Object} eventInfo 
+   * @returns dom element for displaying event data
+   */
 
   const renderEventContent = (eventInfo) => {
     return (

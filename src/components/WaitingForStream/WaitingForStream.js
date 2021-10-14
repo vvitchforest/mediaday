@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Waiting for stream component
+ * @param {string} startDate 
+ * @param {string} startTime
+ * @param {string} endTime
+ * @param children  
+ */
+
+
 const WaitingForStream = ({startDate, startTime, endTime, children}) => {
     
     const [streamHasStarted, setStreamHasStarted] = useState(false);

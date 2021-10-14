@@ -7,6 +7,10 @@ import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
 import EventFetch from "../EventFetch";
 import { Zoom } from "react-awesome-reveal";
 
+/**
+ * A component that displays event pages
+ */
+
 const EventPage = () => {
   const { id } = useParams();
   const url = "/data/events.json";
