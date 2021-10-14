@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react';
 const EventFetch = (url) => {
   const [eventData, setEventData] = useState();
 
+  /**
+   * Fetches data from json
+   * 
+   * @returns {Object}
+   */
   useEffect(() => {
     const fetchData = async () => {
       try {

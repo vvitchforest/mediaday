@@ -1,9 +1,8 @@
 import React from "react";
 import "./footer.scss";
-import { Container, Row} from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-//import eventData from "../data/events.json";
 
 const Footer = () => {
     return (
@@ -13,20 +12,19 @@ const Footer = () => {
                     © 2021 METROPOLIA AMMATTIKORKEAKOULU. ALL RIGHTS RESERVED.
                 </Row>
                 <Row xs="auto" className="d-flex justify-content-center pt-1 pb-1 icon-links">
-                        <Link as={Link} to="/about" className="footer-links">
-                            MEISTÄ
-                        </Link>
-                        <Link as={Link} to="/contact" className="footer-links">
-                            OTA YHTEYTTÄ
-                        </Link>
+                    <Link as={Link} to="/about" className="footer-links">
+                        MEISTÄ
+                    </Link>
+                    <Link as={Link} to="/contact" className="footer-links">
+                        OTA YHTEYTTÄ
+                    </Link>
                 </Row>
                 <Row xs="auto" className="d-flex justify-content-center pt-1 pb-1 icon-links">
-                <a href="https://facebook.com" alt="facebook"><i className="bi bi-facebook"></i></a>
-                <a href="https://twitter.com" alt="twitter"><i className="bi bi-twitter"></i></a>
-                <a href="https://instagram.com" alt="instagram"><i className="bi bi-instagram"></i></a>
-               </Row>
+                    <a href="https://facebook.com" alt="facebook"><i className="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com" alt="twitter"><i className="bi bi-twitter"></i></a>
+                    <a href="https://instagram.com" alt="instagram"><i className="bi bi-instagram"></i></a>
+                </Row>
             </Container>
-
         </div>
     )
 };

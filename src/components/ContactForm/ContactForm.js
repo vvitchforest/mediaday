@@ -15,6 +15,9 @@ const ContactForm = () => {
     const [postMessage, setPostMessage] = useState('');
     let TimeNow = format(new Date(Date.now()), 'dd.MM.yyyy')
 
+    /**
+     * Form field names that have to be same as in the EmailJS template form
+     */
     const [toSend, setToSend] = useState({
         from_name: '',
         to_name: '',
@@ -23,6 +26,11 @@ const ContactForm = () => {
     });
 
 
+    /**
+     * Connects to the EmailJS api and sends response success or failed
+     * 
+     * @param {*} e event
+     */
     const onSubmit = (e) => {
         e.preventDefault();
         send(
@@ -32,20 +40,21 @@ const ContactForm = () => {
             `${process.env.REACT_APP_User_ID}` // User ID
         )
             .then((response) => {
-                //alert(`Thank you for your message. Your query has been forwarded.`);
                 console.log('SUCCESS!', response.status, response.text);
                 setPostMessage("Kiitos! Viestisi on lähetetty.");
                 setShow(true);
                 handleReset();
             })
             .catch((err) => {
-                //alert("Message failed to send.");
                 console.log('FAILED...', err);
                 setPostMessage("Viestin lähettäminen epäonnistui.");
                 setShow(true)
             });
     };
 
+    /**
+     * Resets the form fields
+     */
     const handleReset = () => {
         setToSend({
             from_name: '',
@@ -55,6 +64,11 @@ const ContactForm = () => {
         });
     };
 
+    /**
+     * Sends info to mail via EmailJS
+     * 
+     * @param {*} e event
+     */
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };

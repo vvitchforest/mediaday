@@ -1,11 +1,9 @@
 import "./info-card.scss";
-
 import React from "react";
 import { Card } from "react-bootstrap";
 import Gradient from '../Gradient/Gradient';
 
 const InfoCard = ({ number, title, text, icon }) => {
-
     document.title = "MediaDay"
 
     return (
