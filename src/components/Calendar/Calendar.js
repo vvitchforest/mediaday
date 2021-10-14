@@ -60,7 +60,7 @@ const Calendar = () => {
         slotMaxTime="17:00:00"
         nowIndicator={true}
         headerToolbar={false}
-        height={750}
+        height={850}
         eventBackgroundColor="rgba(106, 162, 252, 0.8)"
         eventBorderColor="rgb(106, 160, 252)"
         eventTextColor="black"
