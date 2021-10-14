@@ -1,5 +1,6 @@
 @import "base";
 
+
 .App {
   height:100vh; 
   margin:0;
@@ -12,7 +13,7 @@
 }
 
 .img {
-  background: url("/images/bg6.jpg") no-repeat;
+  background: url("/images/bg_1500.jpg") no-repeat;
   display: flex;
   height: 100vh;
   min-height: 600px;
@@ -87,6 +88,18 @@
 .border-no {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+@media (max-width: 1000px) {
+  .img {
+    background: url("/images/bg_1000.jpg") no-repeat;
+  }
+}
+
+@media (max-width: 500px) {
+  .img {
+    background: url("/images/bg_500.jpg") no-repeat;
+  }
 }
 
 @media (max-width: 350px) {
