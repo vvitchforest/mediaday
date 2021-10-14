@@ -11,7 +11,7 @@ const SchedulePage = () => {
         MediaDay aikataulu
       </h1>
       <h2 className="subheading-style mb-4">
-        23.03.2022, Karaportti 2
+        1.4.2022, Karaportti 2
       </h2>
       <Row className="justify-content-md-center my-calendar-row">
         <Col md={12} lg={8} className="bg-light p-3 shadow rounded">

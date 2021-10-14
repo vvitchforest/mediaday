@@ -55,12 +55,12 @@ const Calendar = () => {
       <FullCalendar
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
-        initialDate="2021-10-13"
-        slotMinTime="10:00:00"
-        slotMaxTime="18:00:00"
+        initialDate="2021-10-14"
+        slotMinTime="9:00:00"
+        slotMaxTime="17:00:00"
         nowIndicator={true}
         headerToolbar={false}
-        height={850}
+        height={750}
         eventBackgroundColor="rgba(106, 162, 252, 0.8)"
         eventBorderColor="rgb(106, 160, 252)"
         eventTextColor="black"

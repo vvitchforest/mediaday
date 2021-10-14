@@ -10,6 +10,8 @@ import { ImBubbles3 } from "react-icons/im";
 import { BiLink } from "react-icons/bi";
 import Sponsors from "../components/Sponsors/Sponsors";
 import ButtonUp from "../components/ButtonUp/ButtonUp";
+import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 const Home = () => {
@@ -31,22 +33,32 @@ const Home = () => {
                 <div className="img">
                     <Container>
                         <div className="extra-margin-left">
-                            <Row xs="auto">
-                                <h1 className="display-2 mediaday">MEDIADAY</h1>
-                            </Row>
-                            <Row xs="auto">
-                                <p className="header-txt other-color">23.3.2022</p>
-                            </Row>
-                            <Row xs="auto">
-                                <p className="slogan-txt">LET'S GET INSPIRED!</p>
-                            </Row>
-                            <Row xs="auto" >
-                                <p className="header-txt border-no">Metropolia</p>
-                                <p className="header-txt closer">ammattikorkeakoulu</p>
-                            </Row>
-                            <Row xs="auto">
-                                <p className="header-txt">Karaportti 2, Espoo</p>
-                            </Row>
+                            <Slide>
+                                <Row xs="auto">
+                                    <h1 className="display-2 mediaday">MEDIADAY</h1>
+                                </Row>
+                            </Slide>
+                            <Slide delay={500}>
+                                <Row xs="auto">
+                                    <p className="header-txt other-color">1.4.2022</p>
+                                </Row>
+                            </Slide>
+                            <Slide delay={1000}>
+                                <Row xs="auto">
+                                    <p className="slogan-txt">LET'S GET INSPIRED!</p>
+                                </Row>
+                            </Slide>
+                            <Slide delay={1500}>
+                                <Row xs="auto" >
+                                    <p className="header-txt border-no">Metropolia</p>
+                                    <p className="header-txt closer">ammattikorkeakoulu</p>
+                                </Row>
+                            </Slide>
+                            <Slide delay={2000}>
+                                <Row xs="auto">
+                                    <p className="header-txt">Karaportti 2, Espoo</p>
+                                </Row>
+                            </Slide>
                         </div>
                         <Row xs="auto" className="justify-content-center extra-margin-top">
                             <Col>
@@ -66,47 +78,55 @@ const Home = () => {
             </header>
             <div>
                 <Container className="my-stream">
-                    <StreamOnHomePage ref={toStreamRef}/>
+                    <StreamOnHomePage ref={toStreamRef} />
                 </Container>
                 <ButtonUp />
                 <Container>
                     <Row xs={1} md={1} lg={2} className="g-4">
                         <Col>
-                            <InfoCard
-                                number="01"
-                                title="MediaDay 2022"
-                                text="Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän tauon jälkeen keväällä 2022."
-                                icon={<BiMoviePlay />}
-                            />
+                            <Fade>
+                                <InfoCard
+                                    number="01"
+                                    title="MediaDay 2022"
+                                    text="Metropolia ammattikorkeakoulu järjestää Mediaday-tapahtuman pitkän tauon jälkeen keväällä 2022."
+                                    icon={<BiMoviePlay />}
+                                />
+                            </Fade>
                         </Col>
                         <Col>
-                            <InfoCard
-                                number="02"
-                                title="Puhujia eri teollisuudenaloilta"
-                                text="Huipputason ammattilaisten puheenvuoroja, mukana onta rautaista puhujaa monelta mediakentän osa-alueelta."
-                                icon={<ImBubbles3 />}
-                            />
+                            <Fade>
+                                <InfoCard
+                                    number="02"
+                                    title="Puhujia eri teollisuudenaloilta"
+                                    text="Huipputason ammattilaisten puheenvuoroja, mukana onta rautaista puhujaa monelta mediakentän osa-alueelta."
+                                    icon={<ImBubbles3 />}
+                                />
+                            </Fade>
                         </Col>
                         <Col>
-                            <InfoCard
-                                number="03"
-                                title="Mediaday yhdistää"
-                                text="Mediaday tuo opiskelijat ja yritysmaailman yhteen. Näet uusimmat jutut ja tutustu ammattilaisten maailmaan."
-                                icon={<BiLink />}
-                            />
+                            <Fade>
+                                <InfoCard
+                                    number="03"
+                                    title="Mediaday yhdistää"
+                                    text="Mediaday tuo opiskelijat ja yritysmaailman yhteen. Näet uusimmat jutut ja tutustu ammattilaisten maailmaan."
+                                    icon={<BiLink />}
+                                />
+                            </Fade>
                         </Col>
                         <Col>
-                            <InfoCard
-                                number="04"
-                                title="Hyväntuulinen tekemisen meininki"
-                                text=" Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat."
-                                icon={<AiFillSmile />}
-                            />
+                            <Fade>
+                                <InfoCard
+                                    number="04"
+                                    title="Hyväntuulinen tekemisen meininki"
+                                    text=" Meillä voi vapaasti kysellä ja ihmetellä, pääkohderyhmänä ovat opiskelijat."
+                                    icon={<AiFillSmile />}
+                                />
+                            </Fade>
                         </Col>
                     </Row>
                 </Container>
                 <Container className="d-flex">
-                <Sponsors />
+                    <Sponsors />
                 </Container>
             </div>
         </>
