@@ -2,6 +2,11 @@ import React from "react";
 import "./countdown.scss";
 import {Container, Row} from "react-bootstrap";
 
+/**
+ * Calculates time
+ * 
+ * @returns {Object} how much time is left
+ */
 const calculateTimeLeft = () => {
     const now = new Date().getTime();
     const countDownDate = new Date("Apr 01, 2022 10:00:00").getTime();
@@ -21,6 +26,7 @@ const calculateTimeLeft = () => {
     return timeLeft;
 }
 
+
 const CountDown = () => {
     const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft());
 
@@ -33,7 +39,6 @@ const CountDown = () => {
             clearTimeout(id);
         };
     });
-
 
     const timerComponents = Object.keys(timeLeft).map(interval => {
         if (!timeLeft[interval]) {

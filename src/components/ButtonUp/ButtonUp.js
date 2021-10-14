@@ -12,6 +12,9 @@ const ButtonUp = () => {
         window.scrollTo(0, 0);
     }, [location]);
 
+    /**
+     * When scrolled down 900px, shows the button
+     */
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop;
         if (scrolled > 900){

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useRef } from "react";
 import StreamOnHomePage from "../components/StreamOnHomePage/StreamOnHomePage";
 import CountDown from "../components/CountDown/CountDown";
 import { Col, Container, Row, Button } from "react-bootstrap";
@@ -15,15 +14,12 @@ import { Fade } from "react-awesome-reveal";
 
 
 const Home = () => {
-    const location = useLocation()
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
-
     const toStreamRef = useRef();
 
-    function handleBackClick() {
+    /**
+     * Scrolls to the element with ref=toStreamRef when clicked on the button
+     */
+    const handleBackClick = () => {
         toStreamRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
@@ -62,10 +58,11 @@ const Home = () => {
                         </div>
                         <Row xs="auto" className="justify-content-center extra-margin-top">
                             <Col>
-                                <Button variant="purple"
-                                    onClick={handleBackClick}
-                                >Striimi</Button>
-
+                                <Button 
+                                    variant="purple"
+                                    onClick={handleBackClick}>
+                                    Striimi
+                                </Button>
                             </Col>
                         </Row>
                         <Row xs="auto" className="justify-content-center extra-margin-bottom mt-2">

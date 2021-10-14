@@ -3,11 +3,14 @@ import "./sponsors.scss";
 import { Col, Container, Row, Image} from "react-bootstrap";
 
 
-//import eventData from "../data/events.json";
-
 const Sponsors = () => {
     const [sponsorData, setSponsorData] = useState();
 
+    /**
+     * Fetches data from sponsors.json from public forder
+     * 
+     * @async
+     */
     const getSponsors = async () => {
         try {
             const options = {
