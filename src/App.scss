@@ -17,14 +17,10 @@
   height: 100vh;
   min-height: 600px;
   flex: 1;
-  z-index: 0;
   align-items: center;
   overflow: hidden; 
   margin-top: 2em;
-}
-
-.text-over-img {
-  z-index: 1; 
+  color: #617fac33;
 }
 
 .extra-margin-left {
@@ -77,8 +73,8 @@
 }
 
 .my-stream{
-  margin-top: 8vw;
-  margin-bottom: 8vw;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
 }
 
 .closer {

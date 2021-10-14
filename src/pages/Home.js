@@ -29,7 +29,7 @@ const Home = () => {
         <>
             <header>
                 <div className="img">
-                    <Container className="text-over-img">
+                    <Container>
                         <div className="extra-margin-left">
                             <Row xs="auto">
                                 <h1 className="display-2 mediaday">MEDIADAY</h1>

@@ -21,9 +21,15 @@
 }
 
 .empty-space {
-    margin-top: 11em;
+    margin-top: 12.5vh;
 }
 
 .margin-top {
     margin-top: -0.5em;
+}
+
+@media (max-width: 500px) {
+    .empty-space {
+        margin-top: 10vh;
+    }
 }

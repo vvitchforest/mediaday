@@ -4,7 +4,7 @@ import {Container, Row} from "react-bootstrap";
 
 const calculateTimeLeft = () => {
     const now = new Date().getTime();
-    const countDownDate = new Date("Mar 23, 2022 23:13:00").getTime();
+    const countDownDate = new Date("Mar 23, 2022 10:00:00").getTime();
     const difference = countDownDate - now;
 
     let timeLeft = {};
