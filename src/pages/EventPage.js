@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import Video from "../components/Video/Video";
 import WaitingForStream from "../components/WaitingForStream/WaitingForStream";
 import EventFetch from "../EventFetch";
+import { Zoom } from "react-awesome-reveal";
 
 const EventPage = () => {
   const { id } = useParams();
@@ -78,10 +79,12 @@ const EventPage = () => {
                   {!streamHasStarted && (
                     <Row className="d-flex flex-column">
                       <Col lg={4} className="align-self-center">
-                        <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
-                          Striimi alkaa {eventResult.startDate} klo.{" "}
-                          {eventResult.startTime}
-                        </Alert>
+                        <Zoom>
+                          <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
+                            Striimi alkaa {eventResult.startDate} klo.{" "}
+                            {eventResult.startTime}
+                          </Alert>
+                        </Zoom>
                       </Col>
                       <Col>
                         <Video url={eventPromoUrl} type={eventPromoType} />
@@ -91,10 +94,12 @@ const EventPage = () => {
                   {streamHasEnded && (
                     <Row className="d-flex flex-column">
                       <Col lg={8} className="align-self-center">
-                        <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
-                          Videotallenne striimistä{" "}
-                          <span className="fw-bold">{eventResult.title} </span>
-                        </Alert>
+                        <Zoom>
+                          <Alert className="text-style blue-overlay mt-1 shadow p-2 rounded text-center">
+                            Videotallenne striimistä{" "}
+                            <span className="fw-bold">{eventResult.title} </span>
+                          </Alert>
+                        </Zoom>
                       </Col>
                       <Col>
                         <Video

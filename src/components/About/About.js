@@ -17,7 +17,7 @@ const About = () => {
         <Col>
           <h1 className="main-heading-style text-center">MediaDay</h1>
           <h2 className="subheading-style text-center">
-            23.3.2022, klo 10:00-17:00, Karaportti 2, Espoo
+            1.4.2022, klo 10:00-17:00, Karaportti 2, Espoo
           </h2>
         </Col>
       </Row>

@@ -60,7 +60,7 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
             </>
           ) : (
             <>
-            <h2 className="main-heading-style text-center pb-4">MEDIADAY 23.3.2022</h2>
+            <h2 className="main-heading-style text-center pb-4">MEDIADAY 1.4.2022</h2>
             <Video url={eventPromoUrl} type={eventPromoType} />
             </>
           )}

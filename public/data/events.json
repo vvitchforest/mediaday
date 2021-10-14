@@ -14,8 +14,8 @@
           "company": "Fireframe",
           "image": "/images/mikko_kodisoja.jpg"
       }, 
-      "startTime": "10:00",
-      "endTime": "11:00",
+      "startTime": "9:00",
+      "endTime": "10:00",
       "startDate": "14.10.2021",
       "description": "Yrityksen perustaja Mikko Kodisoja kertoo, miksi vaihtoi peliteollisuuden elokuvamaailmaan. Kuumana puheenaiheena Suomen ensimmäinen Hollywood-tason ledseinä-studio. Puheenvuoro esitetään englanniksi.",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
@@ -31,8 +31,8 @@
           "company": "Swappie",
           "image": "/images/sami_marttinen.jpg"
       }, 
-      "startTime": "11:00",
-      "endTime": "12:00",
+      "startTime": "10:00",
+      "endTime": "11:00",
       "startDate": "14.10.2021",
       "description": "Sami Marttinen esittelee Swappien tarinan, ja teknologian merkityksen yrityksen nousun taustalla. Puheenvuoro esitetään suomeksi.",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
@@ -48,8 +48,8 @@
           "company": "FlyAR",
           "image": "/images/frans_tihverainen.jpg"
       },
-      "startTime": "12:00",
-      "endTime": "14:00",
+      "startTime": "11:00",
+      "endTime": "12:00",
       "startDate": "14.10.2021",
       "description": "Erilainen urapolku - Frans Tihveräinen: Suoraan koulun penkiltä pitkän linjan AR-ammattilaiseksi. Frans kertoo omasta nousustaan AR-ammattilaiseksi, ja esittelee omat vinkkinsä yrittäjyydestä haaveileville opiskelijoille. Puheenvuoro esitetään suomeksi.",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
@@ -66,8 +66,8 @@
           "company": "Sony",
           "image": "/images/Ulrich_Mors.jpg"
       },
-      "startTime": "14:00",
-      "endTime": "15:00",
+      "startTime": "13:00",
+      "endTime": "14:00",
       "startDate": "14.10.2021",
       "description": "Ulrich Mors esittelee Sonyn uusimmat videokamerauutuudet ammattimaisten videotuotantojen käyttöön. Näkökulmana kameroiden käyttö eurooppalaisessa indie-elokuvatuotannossa, josta Ulrichilla on itsessään paljon kokemusta. Puheenvuoro esitetään englanniksi.", 
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
@@ -83,7 +83,7 @@
           "name":  "Mika Vakkilainen",
           "company": "Avita ry"
       },
-      "startTime": "15:00",
+      "startTime": "14:00",
       "endTime": "16:00",
       "startDate": "14.10.2021",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
