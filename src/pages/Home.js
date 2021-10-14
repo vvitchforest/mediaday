@@ -89,8 +89,8 @@ const Home = () => {
                                     icon={<BiMoviePlay />}
                                 />
                             </Col>
-                            </Fade>
-                            <Fade triggerOnce>
+                        </Fade>
+                        <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="02"
@@ -99,8 +99,8 @@ const Home = () => {
                                     icon={<ImBubbles3 />}
                                 />
                             </Col>
-                            </Fade>
-                            <Fade triggerOnce>
+                        </Fade>
+                        <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="03"
@@ -109,8 +109,8 @@ const Home = () => {
                                     icon={<BiLink />}
                                 />
                             </Col>
-                            </Fade>
-                            <Fade triggerOnce>
+                        </Fade>
+                        <Fade triggerOnce>
                             <Col>
                                 <InfoCard
                                     number="04"

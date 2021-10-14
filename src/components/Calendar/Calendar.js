@@ -57,7 +57,7 @@ const Calendar = () => {
         initialView="timeGrid"
         initialDate="2021-10-14"
         slotMinTime="9:00:00"
-        slotMaxTime="17:00:00"
+        slotMaxTime="23:00:00"
         nowIndicator={true}
         headerToolbar={false}
         height={850}
@@ -93,7 +93,7 @@ const Calendar = () => {
             title: data.title,
             start: new Date(year, month - 1, day, startHour, startMinute),
             end: new Date(year, month - 1, day, endHour, endMinute),
-            url: `#/event/${data.videoUrl}`,
+            url: `/event/${data.videoUrl}`,
             description: data?.description,
             speaker: data.speaker.name,
             company: data.speaker.company,
