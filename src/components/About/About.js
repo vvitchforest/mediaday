@@ -48,7 +48,7 @@ const About = () => {
               alan kouluttajat ja opiskelijat
             </p>
 
-            <ul className="text-style m-4">
+            <ul className="text-style m-md-4">
               <li>
                 pohtimaan digitalisoitumisen vaikutuksia työelämään, oppimiseen
                 ja opettamiseen
@@ -89,7 +89,7 @@ const About = () => {
               katsomaan ja kuuntelemaan
             </p>
             <p className="text-style">Puhujina mm. </p>
-            <ul className="text-style m-3">
+            <ul className="text-style m-md-3">
               {eventData?.events.map(({ speaker }) => (
                 <li key={speaker.name}>
                   {speaker.name}, <i>{speaker.company}</i>

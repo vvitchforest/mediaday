@@ -51,7 +51,7 @@ const EventPage = () => {
             </p>
           </Col>
           <Col lg={9} className="event-info">
-            <h1 className="my-2 heading-style">{eventResult.title}</h1>
+            <h1 className="my-2 main-heading-style">{eventResult.title}</h1>
             <p className="text-style fw-bold">
               {eventResult.startDate} klo. {eventResult.startTime}-
               {eventResult.endTime}

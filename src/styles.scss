@@ -26,7 +26,7 @@
 
 .text-style {
   font-family: "Nunito Sans", sans-serif;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(16px + 1vmin);
 }
 
 .subheading-style {
@@ -86,7 +86,7 @@
 .event-dropdown {
   font-family: "Nunito", sans-serif;
   color: black;
-  font-size: 0.75em;
+  font-size: 1em;
 
   &:hover {
     background-color: $myLinkHoverColor;
@@ -109,7 +109,7 @@ a.nav-link.event-dropdown-active {
 
 @media only screen and (min-width: 568px) {
   .event-dropdown {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 
   .dropdown-menu {
