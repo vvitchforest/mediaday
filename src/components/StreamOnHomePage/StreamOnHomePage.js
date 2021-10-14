@@ -1,15 +1,27 @@
-import React, { forwardRef} from 'react'
+import React, { forwardRef } from "react";
 import "../../pages/event.scss";
 import "../../styles.scss";
-import { Col, Row} from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Video from "../Video/Video";
 import EventFetch from "../../EventFetch";
 import { BiBroadcast } from "react-icons/bi";
+
+/**
+ * Renders <StreamOnHomePage /> component
+ */
 
 // eslint-disable-next-line no-empty-pattern
 const StreamOnHomePage = forwardRef(({}, ref) => {
   const url = "/data/events.json";
   const eventResult = EventFetch(url);
+
+  /**
+   * A function that checks whether the current time is between start time and end time parameters and if current date matches start date
+   * @param {string} startTime
+   * @param {string} endTime
+   * @param {string} startDate
+   * @returns boolean
+   */
 
   const isEventNow = (startTime, endTime, startDate) => {
     const [day, month, year] = startDate.split(".").map(Number);
@@ -60,8 +72,10 @@ const StreamOnHomePage = forwardRef(({}, ref) => {
             </>
           ) : (
             <>
-            <h2 className="main-heading-style text-center pb-4">MEDIADAY 1.4.2022</h2>
-            <Video url={eventPromoUrl} type={eventPromoType} />
+              <h2 className="main-heading-style text-center pb-4">
+                MEDIADAY 1.4.2022
+              </h2>
+              <Video url={eventPromoUrl} type={eventPromoType} />
             </>
           )}
         </Col>
