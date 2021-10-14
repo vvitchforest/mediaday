@@ -49,13 +49,8 @@
           "image": "/images/frans_tihverainen.jpg"
       },
       "startTime": "11:00",
-<<<<<<< HEAD
-      "endTime": "13:00",
-      "startDate": "14.10.2021",
-=======
       "endTime": "12:00",
       "startDate": "15.10.2021",
->>>>>>> f46a16ba6060151ceeb5d2afd57eef223da81808
       "description": "Erilainen urapolku - Frans Tihveräinen: Suoraan koulun penkiltä pitkän linjan AR-ammattilaiseksi. Frans kertoo omasta nousustaan AR-ammattilaiseksi, ja esittelee omat vinkkinsä yrittäjyydestä haaveileville opiskelijoille. Puheenvuoro esitetään suomeksi.",
       "streamUrl": "http://195.148.104.124:1935/jakelu/irinan/playlist.m3u8",
       "streamVideoType": "application/x-mpegurl",
