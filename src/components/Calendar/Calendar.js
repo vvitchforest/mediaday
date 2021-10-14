@@ -57,7 +57,7 @@ const Calendar = () => {
         initialView="timeGrid"
         initialDate="2021-10-14"
         slotMinTime="9:00:00"
-        slotMaxTime="23:00:00"
+        slotMaxTime="17:00:00"
         nowIndicator={true}
         headerToolbar={false}
         height={850}
