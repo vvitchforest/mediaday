@@ -29,7 +29,7 @@ const Home = () => {
                 <div className="img">
                     <Container>
                         <div className="extra-margin-left">
-                            <Slide cascade triggerOnce={true}>
+                            <Slide triggerOnce={true}>
                                 <Row xs="auto">
                                     <h1 className="display-2 mediaday">MEDIADAY</h1>
                                 </Row>
