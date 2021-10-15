@@ -20,20 +20,20 @@
   font-family: "Open Sans Condensed", sans-serif;
   color: $myPurpleColor;
   letter-spacing: 1px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1em + 2vw);
   font-weight: 700;
 }
 
 .text-style {
   font-family: "Nunito Sans", sans-serif;
-  font-size: calc(16px + 1vmin);
+  font-size: 1em;
 }
 
 .subheading-style {
   font-family: "Open Sans Condensed", sans-serif;
   color: black;
   letter-spacing: 1px;
-  font-size: calc(10px + 1.25vmin);
+  font-size: 1.6em;
   font-weight: 700;
 }
 
@@ -108,9 +108,6 @@ a.nav-link.event-dropdown-active {
 }
 
 @media only screen and (min-width: 568px) {
-  .event-dropdown {
-    font-size: 1.25em;
-  }
 
   .dropdown-menu {
     border: 1px solid lightgrey;
