@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import { useEffect } from "react";
 import EventFetch from "./EventFetch";
+import { Fade } from "react-awesome-reveal";
 
 function App() {
   const location = useLocation();
@@ -57,7 +58,9 @@ function App() {
         <Route path="/" exact component={Home}></Route>
       </Switch>
 
-      <Footer />
+      <Fade>
+        <Footer />
+      </Fade>
     </div>
   );
 }
